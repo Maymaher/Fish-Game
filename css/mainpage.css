@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+    /* background-color:rgb(2 71 143);
+     */
+     background-image: url("../img/Get\ Fishdom.jpg");
+     
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background: #111; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+section span{
+    position: absolute;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+    animation: animate 4s linear infinite ;
+}
+
+section span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%,-70%);
+    background: radial-gradient(#fff,transparent);
+    border-radius: 50%;
+}
+
+@keyframes animate{
+0%{
+    transform: translateY(0%);
+    opacity: 1;
+}
+100%{
+    transform: translateY(-1200%);
+    opacity: 1;
+}
+
+}
+
+
+
+h1{
+    text-align: center;
+    font-size: 6rem;
+    /* font-size: 92px; */
+    color: #e96300;
+    margin-bottom: 0px;
+    margin-top: 83px;
+    
+  font-family:Erica One;
+ 
+  -webkit-text-stroke:1px #862d27;
+  text-shadow:0px 1px 0 #862d27,0px 2px 1px #862d27,
+  0px 3px 0 #862d27,0px 4px 0 #862d27,
+  0px 5px 0 #862d27,0px 6px 0 #862d27,
+  0px 7px 0 #862d27,0px 8px 1px #862d27,
+  0px 9px 0 #862d27,0px 10px 0 #862d27,
+  0px 11px 0 #000000,0px 12px 1px #000000,
+  0px 13px 0 #000000,0px 14px 0 #000000,
+  0px 15px 0 #000000,0px 16px 1px #000000
+  /* 0px 17px 0 #000000,0px 18px 0 #000000,
+  0px 19px 0 #000000,0px 20px 0 #000000,
+  0px 21px 0 #000000,0px 22px 2px #000000; */
+  }
+
+  button{
+    display: block;
+    width: 10%;
+    position: relative;
+    top: 75px;
+    left: 44%;
+    cursor: pointer;
+    text-decoration: none !important;
+    outline: none !important;
+    font-family: 'Carter One', sans-serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    letter-spacing: .1em;
+    text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2, 2px -2px 1px #0066a2, -2px -2px 1px #0066a2, 0px 2px 1px #0066a2, 0px -2px 1px #0066a2, 0px 4px 1px #004a87, 2px 4px 1px #004a87, -2px 4px 1px #004a87;
+    border: none;
+    margin: 15px 15px 30px;
+    background: repeating-linear-gradient(
+45deg
+, #3ebbf7, #3ebbf7 5px, #45b1f4 5px, #45b1f4 10px);
+    border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+    border-top: 3px solid rgba(255, 255, 255, .3);
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 25px 25px 20px;
+    box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgb(0 0 0 / 30%), 0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e, 0 15px 1px 6px rgb(0 0 0 / 30%);
+}
+  
+/* 
+button {
+    border-radius: 3em;
+    border-color: green;
+    color: green;
+    background-image: linear-gradient(to bottom, transparent 50%, green 50%);
+        background-position: 0% 0%;
+        background-size: 210%;
+        padding: 19px;
+    transition: 150ms ease-in-out, color 150ms ease-in-out;
+
+    
+    
+  }
+  
+
+  button:hover {
+    color: #fff;
+    background-position: 0 100%;
+  }
+   */
