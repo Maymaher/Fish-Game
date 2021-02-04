@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    object-fit: cover;
+
+  }
+.char_container{
+ margin: 10%;
+ margin-left:23%;
+ margin-bottom:10%;
+ width: auto;
+ position: relative;
+
+ height: auto;
+}
+#fish1{
+   border: 1px solid black;
+  border-radius:25px;
+  padding:0%;
+  margin: 0;
+ 
+  
+ 
+ 
+}
+#fish2{
+   
+  border: 1px solid black;
+  border-radius:25px;
+  margin-left:5%;
+
+ 
+ 
+}
+#fish3{
+   border: 1px solid black;
+  margin-left:5%;
+  border-radius:25px;
+ 
+}
+
+button{
+
+  border-radius:25px;
+  color: white;
+  background-color:lightblue;
+  
+  font-family: Arial;
+  font-size: 17px;
+  
+
+
+}
+ a  {
+   text-decoration: none;
+
+ }
+ #button-1{
+  
+  margin-left:6%;
+  padding: 1%;
+  width:10%;
+  
+
+}
+ #button-2{
+  
+  margin-left:18%;
+  padding: 1%;
+  width:10%;
+ }
+ #button-3{
+  margin-left:17%;
+  padding: 1%;
+  width:10%;
+
+ }
+ .buttons{
+margin-top: 3%;
+
+
+ }
+ img{
+  border-radius:25px;
+  border:0;
+ 
+  
+ }
+ 
