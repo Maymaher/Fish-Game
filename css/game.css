@@ -1,0 +1,13 @@
+body{
+    overflow: hidden;
+    background-color: blanchedalmond;
+}
+
+
+#canvas1{
+    background: linear-gradient(to bottom,lightblue,darkblue,black);
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
