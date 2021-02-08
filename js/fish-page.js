@@ -1,55 +1,45 @@
-//canvas setup
-const canvas=document.getElementById("canvas1")
-const ctx=canvas.getContext('2d')
-var g=document.getElementById("canvas1")
-var canvasRect = canvas.getBoundingClientRect(); 
+// // canvas setup
+// const canvas=document.getElementById("canvas1")
+// const ctx=canvas.getContext('2d')
+// var g=document.getElementById("canvas1")
+// var canvasRect = canvas.getBoundingClientRect(); 
+
+// canvas.width=window.innerWidth
+// canvas.heigth=window.innerHeight
+// console.log(window.innerWidth);
+// console.log(window.innerHeight);
+
+// let score =0;
+// let gameFrame=0;
+// ctx.font='50px Georgia';
+// let canvasposition=canvas.getBoundingClientRect();
 
 
-canvas.width=window.innerWidth
-canvas.heigth=window.innerHeight
-console.log(window.innerWidth);
-console.log(window.innerHeight);
+// const mouse={
+// x:canvas.width/2,
+// y:canvas.heigth/2,
+// click:false
+// }
 
-let score =0;
-let gameFrame=0;
-ctx.font='50px Georgia';
-let canvasposition=canvas.getBoundingClientRect();
-
-
-const mouse={
-x:canvas.width/2,
-y:canvas.heigth/2,
-click:false
-}
-canvas.addEventListener('mousemove',function(event){
-mouse.click=true;
-mouse.x= event.x -canvasposition.left;
-mouse.y= event.y - canvasposition.top;
-//console.log("line 22",mouse.x,mouse.y);
-});
-console.log(canvasposition);
-canvas.addEventListener('mouseup',function()
-{
-
-mouse.click=false;
-
-})
 //player
-const playerLeft=new Image();
-playerLeft.src="img/imageonline-co-resizedimage (3).png";
+// const playerLeft=new Image();
+// playerLeft.src="./img/imageonline-co-resizedimage (3).png";
 
-// //playerLeft.setAttribute('bordee-radius','25px')
- const playeRight=new Image();
-  playeRight.src="img/imageonline-co-flipped (8).png"
-const playedown_left=new Image();
-playedown_left.src="img/imageonline-co-flipped (7).png"
-const playedown_Rigth=new Image();
- playedown_Rigth.src="img/imageonline-co-flipped (9).png"
+// // //playerLeft.setAttribute('bordee-radius','25px')
+//  const playeRight=new Image();
+//   playeRight.src="./img/imageonline-co-flipped (8).png"
+// // const playedown_left=new Image();
+// // playedown_left.src="./img/imageonline-co-flipped (7).png"
+// // const playedown_Rigth=new Image();
+// //  playedown_Rigth.src="./img/imageonline-co-flipped (9).png"
 
 class Player{
     constructor(){
         this.x=canvas.width/2;
-        this.y=canvas.heigth/2;
+        this.y=canvas.height/2;
+        console.log( "xx"+this.x)
+        console.log( "yyy"+this.y)
+
         this.radius=10;
         this.angle=0;
         this.frameX=0;
@@ -78,15 +68,16 @@ class Player{
     }
     draw(){
 
-        if(mouse.click)
-        { console.log("move");
-            ctx.lineWidth=0.2;
-            ctx.beginPath();
-            ctx.moveTo(this.x,this.y);
-            ctx.lineTo(mouse.x,mouse.y);
-            ctx.stroke();
+        // if(mouse.click)
+        // {
+        //      console.log("move");
+        //     ctx.lineWidth=0.2;
+        //     ctx.beginPath();
+        //     ctx.moveTo(this.x,this.y);
+        //     ctx.lineTo(mouse.x,mouse.y);
+        //     ctx.stroke();
 
-        }
+        // }
        
         //ctx.fillStyle='red';
         //ctx.beginPath();
@@ -142,20 +133,21 @@ class Player{
 
     }
 }
-const player=new Player();
 
+
+// const player=new Player();
 //animate loop
 
-function animate(){
+// function animate(){
 
-    ctx.clearRect(0,0,canvas.width,canvas.heigth)
-    player.update();
-    player.draw();
-   gameFrame++;
+//     ctx.clearRect(0,0,canvas.width,canvas.heigth)
+//     player.update();
+//     player.draw();
+//    gameFrame++;
 
-    requestAnimationFrame(animate);
-    //requestAnimationFrame(player.draw);
+//     requestAnimationFrame(animate);
+//     //requestAnimationFrame(player.draw);
 
-}
+// }
 
-animate();
+// animate();
