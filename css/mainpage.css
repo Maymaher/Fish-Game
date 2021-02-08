@@ -105,24 +105,6 @@ h1{
     box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgb(0 0 0 / 30%), 0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e, 0 15px 1px 6px rgb(0 0 0 / 30%);
 }
   
-/* 
-button {
-    border-radius: 3em;
-    border-color: green;
-    color: green;
-    background-image: linear-gradient(to bottom, transparent 50%, green 50%);
-        background-position: 0% 0%;
-        background-size: 210%;
-        padding: 19px;
-    transition: 150ms ease-in-out, color 150ms ease-in-out;
-
-    
-    
-  }
-  
-
-  button:hover {
-    color: #fff;
-    background-position: 0 100%;
-  }
-   */
+a{
+    text-decoration: none;
+}
