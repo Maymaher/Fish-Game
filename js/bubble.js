@@ -22,12 +22,7 @@ class bubble {
     }
 
     draw() {
-        // ctx.fillStyle = "blue";
-        // ctx.beginPath();
-        // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        // ctx.fill();
-        // ctx.closePath();
-        // ctx.stroke();
+        
         ctx.drawImage(bubbleImage, this.x - 39, this.y - 39, this.radius * 2.6, this.radius * 2.6);
     }
 
@@ -77,7 +72,11 @@ function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     handleBackground();
-    handleBubbles();
+    if(mouse.click==true)
+    {
+        handleBubbles();
+    }
+    
     player.update();
     player.draw();
 

@@ -20,3 +20,14 @@ body{
 img{
     position: absolute;
 }
+
+
+#start-popup-desc{
+    width: 684px;
+    height: 434px;
+    /* text-align: center; */
+    margin: 94px auto;
+    background-color: gainsboro;
+    z-index: 1;
+    /* display: none; */
+}

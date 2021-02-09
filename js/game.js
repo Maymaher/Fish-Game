@@ -2,8 +2,9 @@ const canvas = document.getElementById("canvas1")
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-console.log("w="+window.innerWidth);
-console.log("h+"+window.innerHeight);
+const ok=document.getElementById("ok")
+// console.log("w="+window.innerWidth);
+// console.log("h+"+window.innerHeight);
 
 let score = 0;
 let gameFrame = 0;
@@ -17,15 +18,15 @@ const mouse = {
     click: false
 }
 
-// canvas.addEventListener("mousedown", function (e) {
-//     mouse.x = e.x - canvasPosition.left;
-//     mouse.y = e.y - canvasPosition.top;
-// })
-// console.log("cnv position==="+canvasPosition);
+
 canvas.addEventListener('mousemove',function(event){
-    mouse.click=true;
-    mouse.x= event.x - canvasPosition.left;
-    mouse.y= event.y - canvasPosition.top;
+    // mouse.click=true;
+    if(mouse.click==true)
+    {
+        mouse.x= event.x - canvasPosition.left;
+        mouse.y= event.y - canvasPosition.top;
+    }
+  
     // console.log("line 22",mouse.x,mouse.y);
     });
     
@@ -34,6 +35,13 @@ canvas.addEventListener('mouseup',function()
 {
 
 mouse.click=false;
+
+})
+
+ok.addEventListener("click",function()
+{
+    mouse.click=true;
+    document.getElementById("start-popup-desc").style.display="none"
 
 })
 
