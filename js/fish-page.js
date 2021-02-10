@@ -33,6 +33,8 @@
 // // const playedown_Rigth=new Image();
 // //  playedown_Rigth.src="./img/imageonline-co-flipped (9).png"
 
+
+
 class Player{
     constructor(){
         this.x=canvas.width/2;
@@ -88,6 +90,12 @@ class Player{
        ctx.save();
      //   ctx.rotate(this.angle)
         ctx.translate(this.x,this.y);
+        if(score>10)
+        {
+            console.log(score);
+            playerLeft.src="./img/imageonline-co-resizedimage (3).png";
+            playeRight.src="./img/imageonline-co-flipped (8).png"
+        
         if(this.x>=mouse.x){
             
             
@@ -104,6 +112,30 @@ class Player{
 
 
         }
+    }
+    else{
+        console.log(score);
+        playerLeft.src="./img/imageonline-co-resizedimage (3).png";
+        playeRight.src="./img/imageonline-co-flipped (8).png"
+    
+    if(this.x>=mouse.x){
+        
+        
+        ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+            this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth/1.5,this.spriteHeight/1.5);
+          
+      
+   }
+    else if (this.x<mouse.x){
+       
+        
+        ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+        this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth/1.5,this.spriteHeight/1.5);
+
+
+    }
+
+    }
 //          if(this.y<mouse.y && this.x>=mouse.x) 
 //         { 
 //             //    context.clearRect(0, 0, canvas.width, canvas.height);

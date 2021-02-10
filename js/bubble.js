@@ -75,6 +75,7 @@ function animate() {
     if(mouse.click==true)
     {
         handleBubbles();
+        handeleEnemies()
     }
     
     player.update();
@@ -84,6 +85,7 @@ function animate() {
     ctx.fillText('score:' + score, 50, 100)
     ctx.fillStyle = "black";
     ctx.font = "50px Arial";
+    if (!gameOver)
     requestAnimationFrame(animate);
 }
 

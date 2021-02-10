@@ -5,6 +5,7 @@ canvas.height = window.innerHeight;
 const ok=document.getElementById("ok")
 // console.log("w="+window.innerWidth);
 // console.log("h+"+window.innerHeight);
+var gameOver = false
 
 let score = 0;
 let gameFrame = 0;
