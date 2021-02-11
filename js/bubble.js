@@ -44,7 +44,10 @@ function handleBubbles() {
         else if (bubbleArray[i].distance < bubbleArray[i].radius + player.radius) {
             if (!bubbleArray[i].counted) {
                 score++;
+                
+
                 bubbleArray[i].counted = true;
+                
                 bubbleArray.splice(i, 1);
                 i--;
             }

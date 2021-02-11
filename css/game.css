@@ -61,29 +61,29 @@ body{
 .cursor{
     width: 160px;
     position: absolute;
-    left: 45%;
-    top: 21%;
+    left: 37%;
+    top: 12%;
 }
 
 .plus2{
     position: absolute;
-    top: 26%;
-    left: 59%;
+    top: 19%;
+    left: 61%;
     font-size: 46px;
 }
 
 .plus1{
     position: absolute;
-    top: 26%;
-    left: 41%;
+    top: 19%;
+    left: 30%;
     font-size: 46px;
 }
 
 .bubble{
     width: 109px;
     position: absolute;
-    left: 64%;
-    top: 22%;
+    left: 71%;
+    top: 12%;
 }
 
 .times{
@@ -96,14 +96,14 @@ body{
 .equalImg{
     width: 156px;
     position: absolute;
-    left: 41%;
+    left: 35%;
     top: 43%;
 }
 
 .levelImg{
     position: absolute;
     width: 153px;
-    left: 51%;
+    left: 55%;
 }
 
 
@@ -117,7 +117,7 @@ body{
 
 #ok{
     position: absolute;
-    left: 47%;
+    left: 45%;
 }
 
 .btn:link,
@@ -183,4 +183,37 @@ body{
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+#start-popup-desc {
+    /* width: 300px;
+    height: 300px; */
+    /* background: red; */
+    animation: centerme 3s;
+   
+    position: absolute;
+    /* z-index: 999; To ensure that box is always on the top */
+    animation-fill-mode: forwards; /* So that box doesn't move back to default place*/
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes centerme {
+    0%   {
+        left: 0; top: 0;
+    }
+    /* 50%  {
+        left: 20%;
+        top: 7%;
+        margin-top: -150px;
+        margin-left: -150px;
+    } */
+    100%{
+        left: 25%;
+        top: 7%;
+        /* margin-top: -150px;
+        margin-left: -150px; */
+    }
+
+    
+    /* Left and Top are 50% with margins which are half of width and height */
 }
