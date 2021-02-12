@@ -46,7 +46,7 @@ mouse.click=false;
 
 // player
 const playerLeft=new Image();
-playerLeft.src="./img/ch3-co-resizedimage.png";
+playerLeft.src="./img/imageonline-co-resizedimage.png";
  
  const playeRight=new Image();
 
