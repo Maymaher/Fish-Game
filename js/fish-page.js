@@ -90,75 +90,66 @@ class Player{
        ctx.save();
      //   ctx.rotate(this.angle)
         ctx.translate(this.x,this.y);
-        if(score>10)
-        {
-            console.log(score);
-            playerLeft.src="./img/imageonline-co-resizedimage (3).png";
-            playeRight.src="./img/imageonline-co-flipped (8).png"
-        
-        if(this.x>=mouse.x){
-            
-            
-            ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-                this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth,this.spriteHeight);
+        if(score<5){
+            if(this.x>=mouse.x){
+                console.log("one");
+                
+                ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+                    this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth/2,this.spriteHeight/2);
+                  
               
-          
-       }
-        else if (this.x<mouse.x){
-           
-            
-            ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-            this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth,this.spriteHeight);
-
-
+           }
+            else if (this.x<mouse.x){
+               
+                
+                ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+                this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth/2,this.spriteHeight/2);
+    
+    
+            }
         }
-    }
-    else{
-        console.log(score);
-        playerLeft.src="./img/imageonline-co-resizedimage (3).png";
-        playeRight.src="./img/imageonline-co-flipped (8).png"
-    
-    if(this.x>=mouse.x){
-        
-        
-        ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-            this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth/1.5,this.spriteHeight/1.5);
-          
-      
-   }
-    else if (this.x<mouse.x){
-       
-        
-        ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-        this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth/1.5,this.spriteHeight/1.5);
-
-
-    }
-
-    }
-//          if(this.y<mouse.y && this.x>=mouse.x) 
-//         { 
-//             //    context.clearRect(0, 0, canvas.width, canvas.height);
-
-//             playeRight.width=30
-//             playeRight.height=20
-            
-
-//             console.log("enter");
-//             ctx.drawImage(playedown_left,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-//                 this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth,this.spriteHeight);
-
-//         }
-//         else if(this.y<mouse.y && this.x<mouse.x) 
+        else if(score<=10){
+            console.log("two");
+           
+            if(this.x>=mouse.x){
+                
+                
+                ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+                    this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth,this.spriteHeight);
+                  
               
-// {      
-//          ctx.drawImage(playedown_Rigth,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-//                     this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth,this.spriteHeight);
+           }
+            else if (this.x<mouse.x){
+               
+                
+                ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+                this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth,this.spriteHeight);
     
-            
-//         }
-
-
+    
+            }
+        }
+    
+    
+        else {
+            console.log("therd");
+            if(this.x>=mouse.x){
+                
+                
+                ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+                    this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth*1.2,this.spriteHeight*1.2);
+                  
+              
+           }
+            else if (this.x<mouse.x){
+               
+                
+                ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
+                this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth*1.2,this.spriteHeight*1.2);
+    
+    
+            }
+        }
+ 
         ctx.restore()
        
      
