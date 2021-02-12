@@ -1,53 +1,54 @@
-const canvas = document.getElementById("canvas1")
-const ctx = canvas.getContext('2d');
+// const canvas = document.getElementById("canvas1")
+// const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
 
-let score = 0;
-let gameFrame = 0;
-let gameOver = false
-let canvasPosition = canvas.getBoundingClientRect();
+// let score = 0;
+// let gameFrame = 0;
+// let gameOver = false
+// let canvasPosition = canvas.getBoundingClientRect();
 
-const mouse = {
-    x: canvas.width / 2,
-    y: canvas.height / 2,
-    click: false
-}
-canvas.addEventListener('mousemove',function(event){
-    mouse.click=true;
-    mouse.x= event.x - canvasPosition.left;
-    mouse.y= event.y - canvasPosition.top;
-    // console.log("line 22",mouse.x,mouse.y);
-    });
+// const mouse = {
+//     x: canvas.width / 2,
+//     y: canvas.height / 2,
+//     click: false
+// }
+// canvas.addEventListener('mousemove',function(event){
+//     mouse.click=true;
+//     mouse.x= event.x - canvasPosition.left;
+//     mouse.y= event.y - canvasPosition.top;
+//     // console.log("line 22",mouse.x,mouse.y);
+//     });
 
-canvas.addEventListener('mouseup',function()
-{
+// canvas.addEventListener('mouseup',function()
+// {
 
-mouse.click=false;
+// mouse.click=false;
 
-})
+// })
 
-canvas.addEventListener("mousedown", function (e) {
-    mouse.x = e.x - canvasPosition.left;
-    mouse.y = e.y - canvasPosition.top;
-})
+// canvas.addEventListener("mousedown", function (e) {
+//     mouse.x = e.x - canvasPosition.left;
+//     mouse.y = e.y - canvasPosition.top;
+// })
 
-    
+
 
 var enemyImage1 = new Image()
-enemyImage1.src = '__cartoon_fish_06_yellow_swim.png'
-var enemyImage2 = new Image()
-enemyImage2.src='fish_blue.png'
-var enemyImage3 = new Image()
-enemyImage3.src='fish_purpal.png'
+enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
+// var enemyImage2 = new Image()
+// enemyImage2.src = './img/fish_blue.png'
+// var enemyImage3 = new Image()
+// enemyImage3.src = './img/fish_purpal.png'
 
 class Enemy {
     constructor() {
-        this.x = canvas.width +700
-        this.y = Math.random()*(canvas.height-150) + 200
+        this.x = canvas.width + 200
+        console.log(canvas.width);
+        this.y = Math.random() * (canvas.height - 150) + 200
         this.radius = 60
-        this.speed = Math.random() * 2 +0.5
+        this.speed = Math.random() * 2 + 0.5
         this.frame = 0
         this.frameX = 0
         this.frameY = 0
@@ -55,23 +56,6 @@ class Enemy {
         this.spriteHeight = 330
 
     }
-
-    draw() {
-        // ctx.fillStyle = 'red'
-        ctx.beginPath()
-        // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,  
-            this.spriteWidth,this.spriteHeight, this.x-75, this.y-60, this.spriteWidth / 5, this.spriteHeight / 5)
-
-            ctx.drawImage(enemyImage2, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,  
-                this.spriteWidth,this.spriteHeight, this.x-350, this.y-300, this.spriteWidth / 5, this.spriteHeight / 5)   
-
-                ctx.drawImage(enemyImage3, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,  
-                    this.spriteWidth,this.spriteHeight, this.x-700, this.y-250, this.spriteWidth / 5, this.spriteHeight / 5)          
-
-    }
-
     update() {
         this.x -= this.speed
         if (this.x < 0 - this.radius * 2) {
@@ -100,73 +84,128 @@ class Enemy {
         }
 
         //collision with player
-        // const dx = this.x - player.x
-        // const dy = this.y - player.y
-        // const distance = Math.sqrt(dx * dx + dy * dy)
+       
+        const dx = this.x - player.x
+        const dy = this.y - player.y
+        const distance = Math.sqrt(dx * dx + dy * dy)
 
-        // if (distance < this.radius + player.radius) {
-        //     handeleGameOver()
-        // }
+        if (distance < this.radius + player.radius) {
+            handeleGameOver()
+        }
     }
 
+
+    draw() {
+        // ctx.fillStyle = 'red'
+        ctx.beginPath()
+        // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+        ctx.fill()
+        ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
+            this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth / 4, this.spriteHeight / 4)
+
+
+    }
+
+    
 
 }
 
 // function gameOver
 
-// function handeleGameOver() {
-//     ctx.fillStyle = 'white'
-//     ctx.fillText('Game Over , you Reach Score' + score, 130, 250)
-//     gameOver = true
-// }
+
 var EnemyArray = []
 
 var enemy1 = new Enemy()
 function handeleEnemies() {
+   
 
     // enemy1.update()
     // enemy1.draw()
 
-    if (gameFrame % 500 == 0) {
-        
+    if (gameFrame % 100 == 0) {
+
         EnemyArray.push(new Enemy());
-      
+
 
     }
-    console.log(EnemyArray.length);
-    for (let i = 0; i <EnemyArray.length; i++) {
+    // if(EnemyArray.length>0)
+    // {
+    //     for (let i = 0; i < 10; i++) {
+        
+    //         console.log("i=="+i);
+    //         if(i%2==0)
+    //         {
+    //             enemyImage1.src = './img/fish_blue.png'
+               
+    //         }
+    //         else if(i%3==0){
+    //             enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
+               
+    
+    //         }
+    //         else{
+    //             enemyImage1.src = './img/fish_purpal.png'
+    
+    //         }
+    //     }
+      
+    // }
+    
+    for (let i = 0; i < EnemyArray.length; i++) {
+        if(i%2==0)
+        {
+            enemyImage1.src = './img/fish_blue.png'
+           
+        }
+        else if(i%3==0){
+            enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
+           
+
+        }
+        else{
+            enemyImage1.src = './img/fish_purpal.png'
+
+        }
+        
         EnemyArray[i].update();
         EnemyArray[i].draw();
-        if (EnemyArray[i].x < 0 - EnemyArray[i].radius ) {
-            EnemyArray.splice(i, 1);
-            i--;
-        }
-
+        // if (EnemyArray[i].x < 0 - EnemyArray[i].radius) {
+        //     EnemyArray.splice(i, 1);
+        //     i--;
+        // }
        
 
+
+
     }
-   
+
+}
+
+function handeleGameOver() {
+    ctx.fillStyle = 'white'
+    ctx.fillText('Game Over , you Reach Score' + score, 130, 250)
+    gameOver = true
 }
 
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    handeleEnemies()
-    // gameFrame++;
-    // handleBackground();
-    // handleBubbles();
-    // player.update();
-    // player.draw();
-  
-    
-    gameFrame++;
-    // ctx.fillText('score:' + score, 50, 100)
-    // ctx.fillStyle = "black";
-    // ctx.font = "50px Arial";
-    requestAnimationFrame(animate);
-}
+// function animate() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     handeleEnemies()
+//     // gameFrame++;
+//     // handleBackground();
+//     // handleBubbles();
+//     // player.update();
+//     // player.draw();
 
-animate();
+
+//     gameFrame++;
+//     // ctx.fillText('score:' + score, 50, 100)
+//     // ctx.fillStyle = "black";
+//     // ctx.font = "50px Arial";
+//     requestAnimationFrame(animate);
+// }
+
+// animate();
 
 
 // function animate() {

@@ -1,5 +1,7 @@
 characters=document.getElementsByTagName('img')
 buttons=document.getElementsByTagName('button')
+const btn=document.getElementById("button-1")
+
 links= document.getElementsByTagName('a')
 for(var key of buttons ){
 key.addEventListener("mousemove",add)
@@ -50,3 +52,4 @@ function litel(e)
 
 }
 console.log("ok");
+

@@ -17,6 +17,203 @@ body{
     height: 100vh; */
 }
 
-img{
+.fish{
     position: absolute;
+    margin: 34px 56px;
+}
+
+
+#start-popup-desc{
+    width: 815px;
+    height: 500px;
+    /* text-align: center; */
+    margin: 94px auto;
+    /* background-color: #bd4da4; */
+    background-color: #d29dc6;
+    z-index: 1;
+    border-radius: 67px;
+    box-shadow: 7px 10px 13px #8a8383;
+    /* display: none; */
+}
+
+#fish-desc{
+    width: 100%;
+    height: 36%;
+}
+
+#level-label{
+    width: 100%;
+    height: 29%;
+}
+
+#button-sec{
+    width: 100%;
+    height: 18%;
+
+}
+/* .fa{
+    position: absolute;
+    top: 29%;
+    left: 41%;
+    font-size: 46px;
+} */
+
+.cursor{
+    width: 160px;
+    position: absolute;
+    left: 37%;
+    top: 12%;
+}
+
+.plus2{
+    position: absolute;
+    top: 19%;
+    left: 61%;
+    font-size: 46px;
+}
+
+.plus1{
+    position: absolute;
+    top: 19%;
+    left: 30%;
+    font-size: 46px;
+}
+
+.bubble{
+    width: 109px;
+    position: absolute;
+    left: 71%;
+    top: 12%;
+}
+
+.times{
+    top: 31%;
+    position: absolute;
+    left: 71%;
+    font-size: 26px;
+}
+
+.equalImg{
+    width: 156px;
+    position: absolute;
+    left: 35%;
+    top: 43%;
+}
+
+.levelImg{
+    position: absolute;
+    width: 153px;
+    left: 55%;
+}
+
+
+.p-line1{
+    padding-left: 31%;
+}
+
+.p-line2{
+    padding-left: 25%;
+}
+
+#ok{
+    position: absolute;
+    left: 45%;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #710077;
+    color: #fff;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#start-popup-desc {
+    /* width: 300px;
+    height: 300px; */
+    /* background: red; */
+    animation: centerme 2.5s;
+   
+    position: absolute;
+    /* z-index: 999; To ensure that box is always on the top */
+    animation-fill-mode: forwards; /* So that box doesn't move back to default place*/
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes centerme {
+    0%   {
+        left: 0; top: 0;
+    }
+    /* 50%  {
+        left: 20%;
+        top: 7%;
+        margin-top: -150px;
+        margin-left: -150px;
+    } */
+    100%{
+        left: 25%;
+        top: 7%;
+        /* margin-top: -150px;
+        margin-left: -150px; */
+    }
+
+    
+    /* Left and Top are 50% with margins which are half of width and height */
 }
