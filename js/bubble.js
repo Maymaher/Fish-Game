@@ -61,11 +61,14 @@ const background = new Image();
 
 
 function handleBackground() {
-    if (score <= 10) {
-        background.src = "./img/Download Nature Scene With Coral Reef Underwater for free.jpg";
+    if (score <= 5) {
+        background.src = "./img/8.jpg";
     }
-    else {
-        background.src = "./img/Mystic Tidepool - Monarch Athena Crystal Gallery _ Retirement Gifts & Awards Ideas.jpg";
+    else if(score <=10 ){
+        background.src = "./img/2.jpg";
+    }
+    else{
+        background.src = "./img/5.jpg";
     }
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 }

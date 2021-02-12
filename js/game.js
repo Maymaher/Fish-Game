@@ -32,12 +32,12 @@ canvas.addEventListener('mousemove',function(event){
     });
     
 
-canvas.addEventListener('mouseup',function()
-{
+// canvas.addEventListener('mouseup',function()
+// {
 
-mouse.click=false;
+// mouse.click=false;
 
-})
+// })
 
 ok.addEventListener("click",function()
 {
