@@ -22,17 +22,18 @@
 // }
 
 //player
-// const playerLeft=new Image();
-// playerLeft.src="./img/imageonline-co-resizedimage (3).png";
+const playerLeft=new Image();
+playerLeft.src="./img/imageonline-co-resizedimage (3).png";
 
-// // //playerLeft.setAttribute('bordee-radius','25px')
-//  const playeRight=new Image();
-//   playeRight.src="./img/imageonline-co-flipped (8).png"
+// //playerLeft.setAttribute('bordee-radius','25px')
+ const playeRight=new Image();
+  playeRight.src="./img/imageonline-co-flipped (8).png"
 // // const playedown_left=new Image();
 // // playedown_left.src="./img/imageonline-co-flipped (7).png"
 // // const playedown_Rigth=new Image();
 // //  playedown_Rigth.src="./img/imageonline-co-flipped (9).png"
 
+const bubble1=new bubble();
 
 
 class Player{
@@ -70,23 +71,7 @@ class Player{
     }
     draw(){
 
-        // if(mouse.click)
-        // {
-        //      console.log("move");
-        //     ctx.lineWidth=0.2;
-        //     ctx.beginPath();
-        //     ctx.moveTo(this.x,this.y);
-        //     ctx.lineTo(mouse.x,mouse.y);
-        //     ctx.stroke();
 
-        // }
-       
-        //ctx.fillStyle='red';
-        //ctx.beginPath();
-        //ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);
-       // ctx.fill();
-        //ctx.closePath()
-       // ctx.fillRect(this.x,this.y,this.radius,2);
        ctx.save();
      //   ctx.rotate(this.angle)
         ctx.translate(this.x,this.y);
@@ -156,6 +141,32 @@ class Player{
 
     }
 }
+
+const player=new Player();
+// var enemy1 = new Enemy()
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    handleBackground();
+    if(mouse.click==true)
+    {
+       handleBubbles();
+       handeleEnemies()
+    }
+    
+    player.update();
+    player.draw();
+
+    gameFrame++;
+    ctx.fillText('score:' + score, 50, 100)
+    ctx.fillStyle = "black";
+    ctx.font = "50px Arial";
+    if (!gameOver)
+    requestAnimationFrame(animate);
+}
+
+animate();
+
 
 
 // const player=new Player();

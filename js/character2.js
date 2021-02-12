@@ -1,41 +1,41 @@
-const canvas = document.getElementById("canvas1")
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// const canvas = document.getElementById("canvas1")
+// const ctx = canvas.getContext('2d');
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
 
-var gameOver = false
+// var gameOver = false
 
-let score = 0;
-let gameFrame = 0;
+// let score = 0;
+// let gameFrame = 0;
 
-let canvasPosition = canvas.getBoundingClientRect();
-
-
-const mouse = {
-    x: canvas.width / 2,
-    y: canvas.height / 2,
-    click: false
-}
+// let canvasPosition = canvas.getBoundingClientRect();
 
 
-canvas.addEventListener('mousemove',function(event){
+// const mouse = {
+//     x: canvas.width / 2,
+//     y: canvas.height / 2,
+//     click: false
+// }
+
+
+// canvas.addEventListener('mousemove',function(event){
  
-   mouse.click=true
-        mouse.x= event.x - canvasPosition.left;
-        mouse.y= event.y - canvasPosition.top;
+//    mouse.click=true
+//         mouse.x= event.x - canvasPosition.left;
+//         mouse.y= event.y - canvasPosition.top;
 
     
   
-    console.log("line 22",mouse.x,mouse.y);
-    });
+//     console.log("line 22",mouse.x,mouse.y);
+//     });
     
 
-canvas.addEventListener('mouseup',function()
-{
+// canvas.addEventListener('mouseup',function()
+// {
 
-mouse.click=false;
+// mouse.click=false;
 
-})
+// })
 
 // ok.addEventListener("click",function()
 // {
@@ -179,19 +179,26 @@ class Player2{
     }
 }
 
-
- const player=new Player2();
- 
-
+const player=new Player2();
+// var enemy1 = new Enemy()
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-   
+    handleBackground();
+    if(mouse.click==true)
+    {
+       handleBubbles();
+       handeleEnemies()
+    }
+    
     player.update();
     player.draw();
 
     gameFrame++;
-    
+    ctx.fillText('score:' + score, 50, 100)
+    ctx.fillStyle = "black";
+    ctx.font = "50px Arial";
+    if (!gameOver)
     requestAnimationFrame(animate);
 }
 

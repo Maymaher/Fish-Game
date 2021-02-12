@@ -3,7 +3,7 @@ const bubbleArray = [];
 const bubbleImage = new Image();
 bubbleImage.src = "./img/bubble_pop_frame_01.png"
 
-const player = new Player();
+// const player = new Player2();
 
 class bubble {
     constructor() {
@@ -74,25 +74,25 @@ function handleBackground() {
 }
 
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+// function animate() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    handleBackground();
-    if(mouse.click==true)
-    {
-        handleBubbles();
-        handeleEnemies()
-    }
+//     handleBackground();
+//     if(mouse.click==true)
+//     {
+//         handleBubbles();
+//         handeleEnemies()
+//     }
     
-    player.update();
-    player.draw();
+//     player.update();
+//     player.draw();
 
-    gameFrame++;
-    ctx.fillText('score:' + score, 50, 100)
-    ctx.fillStyle = "black";
-    ctx.font = "50px Arial";
-    if (!gameOver)
-    requestAnimationFrame(animate);
-}
+//     gameFrame++;
+//     ctx.fillText('score:' + score, 50, 100)
+//     ctx.fillStyle = "black";
+//     ctx.font = "50px Arial";
+//     if (!gameOver)
+//     requestAnimationFrame(animate);
+// }
 
-animate();
+// animate();

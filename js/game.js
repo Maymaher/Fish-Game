@@ -46,12 +46,12 @@ ok.addEventListener("click",function()
 
 })
 
-const playerLeft=new Image();
-playerLeft.src="./img/imageonline-co-resizedimage (3).png";
+// const playerLeft=new Image();
+// playerLeft.src="./img/imageonline-co-resizedimage (3).png";
 
-playerLeft.setAttribute('bordee-radius','25px')
- const playeRight=new Image();
-  playeRight.src="./img/imageonline-co-flipped (8).png"
+// playerLeft.setAttribute('bordee-radius','25px')
+//  const playeRight=new Image();
+//   playeRight.src="./img/imageonline-co-flipped (8).png"
 // const playedown_left=new Image();
 // playedown_left.src="./img/imageonline-co-flipped (7).png"
 // const playedown_Rigth=new Image();

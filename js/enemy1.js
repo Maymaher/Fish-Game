@@ -1,39 +1,3 @@
-// const canvas = document.getElementById("canvas1")
-// const ctx = canvas.getContext('2d');
-
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-
-// let score = 0;
-// let gameFrame = 0;
-// let gameOver = false
-// let canvasPosition = canvas.getBoundingClientRect();
-
-// const mouse = {
-//     x: canvas.width / 2,
-//     y: canvas.height / 2,
-//     click: false
-// }
-// canvas.addEventListener('mousemove',function(event){
-//     mouse.click=true;
-//     mouse.x= event.x - canvasPosition.left;
-//     mouse.y= event.y - canvasPosition.top;
-//     // console.log("line 22",mouse.x,mouse.y);
-//     });
-
-// canvas.addEventListener('mouseup',function()
-// {
-
-// mouse.click=false;
-
-// })
-
-// canvas.addEventListener("mousedown", function (e) {
-//     mouse.x = e.x - canvasPosition.left;
-//     mouse.y = e.y - canvasPosition.top;
-// })
-
-
 
 var enemyImage1 = new Image()
 enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
