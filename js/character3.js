@@ -1,11 +1,12 @@
 
 const playerLeft=new Image();
-playerLeft.src="./img/char3-preview.png";
- 
+playerLeft.src="./img/imageonline-co-resizedimage.png"
  const playeRight=new Image();
 
- playeRight.src="./img/char3-co-flipped.png"
+ playeRight.src="./img/ch3-co-flipped.png"
  
+ const leve2_div = document.getElementById("level-up2").style.display = "none"
+const level2ok = document.getElementById("level2-ok")
 
 
 class Player3{

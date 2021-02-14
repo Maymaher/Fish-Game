@@ -1,48 +1,4 @@
-// const canvas = document.getElementById("canvas1")
-// const ctx = canvas.getContext('2d');
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
 
-// var gameOver = false
-
-// let score = 0;
-// let gameFrame = 0;
-
-// let canvasPosition = canvas.getBoundingClientRect();
-
-
-// const mouse = {
-//     x: canvas.width / 2,
-//     y: canvas.height / 2,
-//     click: false
-// }
-
-
-// canvas.addEventListener('mousemove',function(event){
- 
-//    mouse.click=true
-//         mouse.x= event.x - canvasPosition.left;
-//         mouse.y= event.y - canvasPosition.top;
-
-    
-  
-//     console.log("line 22",mouse.x,mouse.y);
-//     });
-    
-
-// canvas.addEventListener('mouseup',function()
-// {
-
-// mouse.click=false;
-
-// })
-
-// ok.addEventListener("click",function()
-// {
-//     mouse.click=true;
-//     document.getElementById("start-popup-desc").style.display="none"
-
-// })
 
 // player
 const playerLeft=new Image();
@@ -52,7 +8,8 @@ playerLeft.src="./img/character2-co-resizedimage.png";
 
  playeRight.src="./img/character2-co-flipped.png"
  
-
+ const leve2_div = document.getElementById("level-up2").style.display = "none"
+ const level2ok = document.getElementById("level2-ok")
 
 class Player2{
     constructor(){
@@ -126,50 +83,6 @@ class Player2{
 
         
     }
-//     else{
-//         console.log(score);
-//         playerLeft.src="./img/character2-co-resizedimage.png";
-//         playeRight.src="./img/character2-co-flipped.png"
-    
-//     if(this.x>=mouse.x){
-        
-        
-//         ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-//             this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth/1.5,this.spriteHeight/1.5);
-          
-      
-//    }
-//     else if (this.x<mouse.x){
-       
-        
-//         ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-//         this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth/1.5,this.spriteHeight/1.5);
-
-
-//     }
-
-//     }
-//          if(this.y<mouse.y && this.x>=mouse.x) 
-//         { 
-//             //    context.clearRect(0, 0, canvas.width, canvas.height);
-
-//             playeRight.width=30
-//             playeRight.height=20
-            
-
-//             console.log("enter");
-//             ctx.drawImage(playedown_left,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-//                 this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth,this.spriteHeight);
-
-//         }
-//         else if(this.y<mouse.y && this.x<mouse.x) 
-              
-// {      
-//          ctx.drawImage(playedown_Rigth,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-//                     this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth,this.spriteHeight);
-    
-            
-//         }
 
 
         ctx.restore()
@@ -181,25 +94,83 @@ class Player2{
 
 const player=new Player2();
 // var enemy1 = new Enemy()
+
+
+
+level2ok.addEventListener("click", function () {
+    mouse.click = true;
+    document.getElementById("level-up2").style.display = "none"
+    console.log("hereeeeeeeeeee");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    score = score + 1;
+
+
+})
+
+
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    handleBackground();
-    if(mouse.click==true)
-    {
-       handleBubbles();
-       handeleEnemies()
+
+    document.getElementById("level-up2").style.display = "none"
+    if (score == 5) {
+        mouse.click = false
+        document.getElementById("level-up2").style.display = "block"
+        console.log(score);
+
+
     }
-    
+    else if (score == 10) {
+        mouse.click = false
+        document.getElementById("level-up2").style.display = "block"
+        console.log(score);
+    }
+    handleBackground();
+    if (mouse.click == true) {
+
+        handleBubbles();
+        handeleEnemies()
+    }
+
+
     player.update();
     player.draw();
 
     gameFrame++;
-    ctx.fillText('score:' + score, 50, 100)
+
+    ctx.fillText('score:' + stopScore, 50, 100)
     ctx.fillStyle = "black";
     ctx.font = "50px Arial";
     if (!gameOver)
-    requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
 }
 
+
+
+
+
 animate();
+
+// function animate() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//     handleBackground();
+//     if(mouse.click==true)
+//     {
+//        handleBubbles();
+//        handeleEnemies()
+//     }
+    
+//     player.update();
+//     player.draw();
+
+//     gameFrame++;
+//     ctx.fillText('score:' + score, 50, 100)
+//     ctx.fillStyle = "black";
+//     ctx.font = "50px Arial";
+//     if (!gameOver)
+//     requestAnimationFrame(animate);
+// }
+
+// animate();

@@ -1,6 +1,8 @@
 
 var enemyImage1 = new Image()
 enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
+
+
 // var enemyImage2 = new Image()
 // enemyImage2.src = './img/fish_blue.png'
 // var enemyImage3 = new Image()
@@ -21,6 +23,21 @@ class Enemy {
 
     }
     update() {
+        this.x -= this.speed
+
+        //collision with player
+       
+        const dx = this.x - player.x
+        const dy = this.y - player.y
+        const distance = Math.sqrt(dx * dx + dy * dy)
+
+        if (distance < this.radius + player.radius) {
+            handeleGameOver()
+        }
+    }
+
+
+    update2() {
         this.x -= this.speed
         if (this.x < 0 - this.radius * 2) {
             this.x = canvas.width + 200
@@ -64,9 +81,26 @@ class Enemy {
         ctx.beginPath()
         // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
         ctx.fill()
-        ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
-            this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth / 4, this.spriteHeight / 4)
+        if(score<5)
+        {
+            ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
+                this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth / 4, this.spriteHeight / 4)
+    
+        }
 
+        else if(score<10)
+        {
+            ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
+                this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth/1.5 , this.spriteHeight/1.5 )
+    
+        }
+
+        else{
+            ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
+                this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth/1.5 , this.spriteHeight/1.5 )
+
+        }
+      
 
     }
 
@@ -78,6 +112,9 @@ class Enemy {
 
 
 var EnemyArray = []
+
+
+
 
 var enemy1 = new Enemy()
 function handeleEnemies() {
@@ -92,45 +129,69 @@ function handeleEnemies() {
 
 
     }
-    // if(EnemyArray.length>0)
-    // {
-    //     for (let i = 0; i < 10; i++) {
-        
-    //         console.log("i=="+i);
-    //         if(i%2==0)
-    //         {
-    //             enemyImage1.src = './img/fish_blue.png'
-               
-    //         }
-    //         else if(i%3==0){
-    //             enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
-               
-    
-    //         }
-    //         else{
-    //             enemyImage1.src = './img/fish_purpal.png'
-    
-    //         }
-    //     }
-      
-    // }
+  
     
     for (let i = 0; i < EnemyArray.length; i++) {
-        if(i%2==0)
+        if(score<5)
         {
-            enemyImage1.src = './img/fish_blue.png'
+
+            
+            if(i%2==0)
+            {
+                enemyImage1.src = './img/fish_blue.png'
+               
+            }
+            else if(i%3==0){
+                enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
+               
+    
+            }
+            else{
+                enemyImage1.src = './img/fish_purpal.png'
+    
+            }
+        }
+        else if(score<10)
+        {
+           
+
+            if(i%2==0)
+            {
+                enemyImage1.src = './img/image1.png'
+               
+            }
+            else if(i%3==0){
+                enemyImage1.src = './img/image2.png'
+               
+    
+            }
+            else{
+                enemyImage1.src = './img/image3.png'
+    
+            }
+        }
+
+        else{
+            if(i%2==0)
+        {
+            enemyImage1.src = './img/enemy11.3.png'
            
         }
         else if(i%3==0){
-            enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
+            enemyImage1.src = './img/enemy22.3.png'
            
 
         }
         else{
-            enemyImage1.src = './img/fish_purpal.png'
+            enemyImage1.src = './img/enemy33.3.png'
 
         }
-        
+        }
+       
+        if(score<5)
+        {
+            EnemyArray[i].update2();
+        }
         EnemyArray[i].update();
         EnemyArray[i].draw();
         // if (EnemyArray[i].x < 0 - EnemyArray[i].radius) {
@@ -144,6 +205,8 @@ function handeleEnemies() {
     }
 
 }
+
+
 
 function handeleGameOver() {
     ctx.fillStyle = 'white'

@@ -4,6 +4,16 @@
   }
    */
   /* Style the links inside the navigation bar */
+
+
+
+
+  .topnav{
+    z-index: 1;
+    width: 100%;
+ 
+
+  }
   .topnav a {
     
     color: black;
@@ -69,7 +79,8 @@
     margin-top: 1%;
     font-weight: bold;
   }
-  img{
-    margin-top: 1.4%;
+  .topnav img{
+    margin-top: 0.4%;
+    margin-left: 12%;
 
   }

@@ -8,10 +8,12 @@
     <title>Fish Game</title>
     <link rel="icon" href="img/nOVRrPy--removebg-preview.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
     <link rel="stylesheet" href="css/game.css">
     <!-- <script src="js/fish-page.js"></script> -->
     <!-- <script src="js/game.js"></script> -->
-
+   
+    <link rel="stylesheet" href="css/nav-bar.css">
 
 </head>
 
@@ -19,11 +21,27 @@
     <canvas id="canvas1">
 
     </canvas>
+
+    <div class="topnav">
+        <img src="img/bubble_pop_frame_01.png" width="50px" height="50px">
+         <!-- <p></p> -->
+        <a href="#" id="back"><i class="fa fa-arrow-circle-right" style="font-size:24px"></i></a>
+        <i class="fa fa-volume-up" id="music" style="font-size:30px;"></i>
+        <button class="button button5">RESET</button>
+
+
+      </div>
+      <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+      </audio>
+
+
     <div id="start-popup-desc">
 
         <div id="fish-desc">
             <!-- <figure> -->
-            <img src="img/imageonline-co-flipped (8).png" class="fish">
+            <img src="img/char1-co-flipped.png" class="fish">
             <!-- </figure> -->
 
             <div class="fa fa-plus plus1"></div>
@@ -46,7 +64,7 @@
         <div id="button-sec">
             <p class="p-line1"><b>Welcome to Level 1, Your Challenge to next level:</b></p>
               <p class="p-line2"> Using the mouse move the fish to eat bubbles and reach target score</p>
-            <!-- <button id="ok">ok</button> -->
+          
             <a href="#" class="btn btn-white btn-animate" id="ok">OK</a>
 
         </div>
@@ -56,11 +74,47 @@
     </div>
 
 
+    <div id="level-up2">
+
+        <div id="fish-desc">
+          
+            <img src="img/char1-co-flipped.png" class="fish">
+           
+            <div class="fa fa-plus plus1"></div>
+            <img src="img/Callout-cursor-OS-X-El-Capitan-removebg-preview.png" class="cursor">
+            <div class="fa fa-plus plus2"></div>
+
+            <img src="img/bubble_pop_frame_01.png" class="bubble">
+       
+
+        </div>
+
+        <div id="level-label">
+            <img src="img/equals-removebg-preview.png" class="equalImg">
+            <img src="img/fiverr-level-2-badge-png-Transparent-Images.png" class="levelImg">
+
+        </div>
+        
+
+        <div id="button-sec">
+            <p class="p-line1"><b>Welcome to Level 1, Your Challenge to next level:</b></p>
+              <p class="p-line2"> Using the mouse move the fish to eat bubbles and reach target score</p>
+          
+            <a href="#" class="btn btn-white btn-animate" id="level2-ok">OK</a>
+
+        </div>
+
+
+
+    </div>
+
+   
     <script src="js/game.js"></script>
 
-    <script src="js/enemy2.js"> </script>
+    <script src="js/enemy1.js"> </script>
     <script src="js/bubble.js"></script>
     <script src="js/character1.js"></script>
+    <script src="js/nav-bar.js"></script>
 
 
 </body>
