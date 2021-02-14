@@ -1,84 +1,93 @@
-body {
-    background: #F0CF61;
-    color: #333;
-    font-family: "Avenir", sans-serif;
-    font-weight: 100;
-    font-size: 5vw;
-  }
-  
-  .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60vw;
-    transform: translate3d(-50%, -50%, 0);
-  }
-  
-  .sig {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 800;
-    font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.4);
-  }
-
-
 .swipe {
-    position: relative;
-    text-align: center;
-    height: 3em;
-  }
-  .swipe .sentence {
+  position: relative;
+  text-align: center;
+  height: 3em;
+}
+.swipe .sentence {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  color: transparent;
+}
+.swipe .sentence .line-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: transparent;
+  transition: color 1ms;
+  transition-delay: 500ms;
+}
+.swipe .sentence .line-wrap:nth-child(2) {
+  transition-delay: 666.6666666667ms;
+}
+.swipe .sentence .line-wrap:nth-child(3) {
+  transition-delay: 833.3333333333ms;
+}
+.swipe .sentence .line-wrap:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #1378a2;
+  transform: translateX(-100%);
+  transform-origin: 0% 50%;
+}
+.swipe .sentence--show {
+  z-index: 2;
+}
+.swipe .sentence--show .line-wrap {
+  color: #333;
+}
+.swipe .sentence--show .line-wrap:after {
+  transform: translateX(100%);
+  transition: transform 1000ms ease-in-out;
+}
+.swipe .sentence--show .line-wrap:nth-child(2):after {
+  transition-delay: 166.6666666667ms;
+}
+.swipe .sentence--show .line-wrap:nth-child(3):after {
+  transition-delay: 333.3333333333ms;
+}
+
+body {
+  background: url("../img/7.jpg");
+  color:white;
+  font-family: "Avenir", sans-serif;
+  font-weight: 100;
+  font-size: 5vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 60vw;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.sig {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: sans-serif;
+  color: white;
+}
+
+#backarrow{
+	font-size: 46px;
+    color: black;
     position: absolute;
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    z-index: 1;
-    color: transparent;
-  }
-  .swipe .sentence .line-wrap {
-    position: relative;
-    display: block;
-    width: 100%;
-    color: transparent;
-    transition: color 1ms;
-    transition-delay: 500ms;
-  }
-  .swipe .sentence .line-wrap:nth-child(2) {
-    transition-delay: 666.6666666667ms;
-  }
-  .swipe .sentence .line-wrap:nth-child(3) {
-    transition-delay: 833.3333333333ms;
-  }
-  .swipe .sentence .line-wrap:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #EBE8E1;
-    transform: translateX(-100%);
-    transform-origin: 0% 50%;
-  }
-  .swipe .sentence--show {
-    z-index: 2;
-  }
-  .swipe .sentence--show .line-wrap {
-    color: #333;
-  }
-  .swipe .sentence--show .line-wrap:after {
-    transform: translateX(100%);
-    transition: transform 1000ms ease-in-out;
-  }
-  .swipe .sentence--show .line-wrap:nth-child(2):after {
-    transition-delay: 166.6666666667ms;
-  }
-  .swipe .sentence--show .line-wrap:nth-child(3):after {
-    transition-delay: 333.3333333333ms;
-  }
-  
-  
+    top: 18px;
+    left: 29px;
+}
+
+
