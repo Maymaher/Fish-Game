@@ -1,9 +1,9 @@
 
 const playerLeft=new Image();
-playerLeft.src="./img/imageonline-co-resizedimage.png"
+playerLeft.src="./img/imageonline-co-resizedimage__4_-removebg-preview__1_-removebg-preview.png"
  const playeRight=new Image();
 
- playeRight.src="./img/ch3-co-flipped.png"
+ playeRight.src="./img/char3-right2-removebg-preview (1).png"
  
  const leve2_div = document.getElementById("level-up2").style.display = "none"
 const level2ok = document.getElementById("level2-ok")
@@ -68,7 +68,7 @@ class Player3{
             
             
             ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-                this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth*1.5,this.spriteHeight*1.5);
+                this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth/1.1,this.spriteHeight/1.1);
               
           
        }
@@ -76,7 +76,7 @@ class Player3{
            
             
             ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-            this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth*1.5,this.spriteHeight*1.5);
+            this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth/1.1,this.spriteHeight/1.1);
 
 
         
