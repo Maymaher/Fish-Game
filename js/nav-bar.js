@@ -2,8 +2,7 @@ var music=document.getElementById("music")
 var audio=document.querySelector("audio")
 var reset=document.getElementsByTagName("button")[0]
 var p=document.getElementsByTagName("p")[0]
-// var score=0;
-p.textContent=""
+
 
 console.log("score======"+stopScore);
 console.log(p.textContent);

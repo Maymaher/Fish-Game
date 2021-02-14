@@ -107,7 +107,7 @@ class Player3{
      player.draw();
  
      gameFrame++;
-     ctx.fillText('score:' + score, 50, 100)
+     ctx.fillText( stopScore +"/ 100", 50, 60)
      ctx.fillStyle = "black";
      ctx.font = "50px Arial";
      if (!gameOver)

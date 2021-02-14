@@ -139,7 +139,7 @@ function animate() {
 
     gameFrame++;
 
-    ctx.fillText('score:' + stopScore, 50, 100)
+    ctx.fillText( stopScore +"/ 100", 50, 60)
     ctx.fillStyle = "black";
     ctx.font = "50px Arial";
     if (!gameOver)

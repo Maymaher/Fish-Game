@@ -10,7 +10,7 @@ class bubble {
         this.x = Math.random() * canvas.width;
         this.y = canvas.height + 100;
         this.radius = 30;
-        this.speed = Math.random() * 15 + 1;
+        this.speed = Math.random() * 4 + 1;
         this.distance;
         this.counted = false;
     }
