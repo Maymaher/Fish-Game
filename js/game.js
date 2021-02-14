@@ -3,11 +3,16 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ok=document.getElementById("ok")
+
+
+
+// const level2ok=document.getElementById("level2-ok")
 // console.log("w="+window.innerWidth);
 // console.log("h+"+window.innerHeight);
 var gameOver = false
 
 let score = 0;
+let stopScore=0;
 let gameFrame = 0;
 
 let canvasPosition = canvas.getBoundingClientRect();
@@ -46,12 +51,21 @@ ok.addEventListener("click",function()
 
 })
 
-const playerLeft=new Image();
-playerLeft.src="./img/imageonline-co-resizedimage (3).png";
 
-playerLeft.setAttribute('bordee-radius','25px')
- const playeRight=new Image();
-  playeRight.src="./img/imageonline-co-flipped (8).png"
+
+// level2ok.addEventListener("click",function()
+// {
+//     mouse.click=true;
+//     document.getElementById("level-up2").style.display="none"
+
+// })
+
+// const playerLeft=new Image();
+// playerLeft.src="./img/imageonline-co-resizedimage (3).png";
+
+// playerLeft.setAttribute('bordee-radius','25px')
+//  const playeRight=new Image();
+//   playeRight.src="./img/imageonline-co-flipped (8).png"
 // const playedown_left=new Image();
 // playedown_left.src="./img/imageonline-co-flipped (7).png"
 // const playedown_Rigth=new Image();

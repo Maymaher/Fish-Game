@@ -6,6 +6,8 @@
     margin: 0;
     font-family: Arial;
     font-size: 17px;
+    background-image: url("../img/77.jpg");
+    background-size: cover;
   }
   
   #myVideo {

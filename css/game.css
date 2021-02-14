@@ -36,6 +36,19 @@ body{
     /* display: none; */
 }
 
+#level-up2{
+    width: 815px;
+    height: 500px;
+    /* text-align: center; */
+    margin: 94px auto;
+    /* background-color: #bd4da4; */
+    background-color: #d29dc6;
+    z-index: 1;
+    border-radius: 67px;
+    box-shadow: 7px 10px 13px #8a8383;
+    /* display: none; */
+}
+
 #fish-desc{
     width: 100%;
     height: 36%;
@@ -119,6 +132,11 @@ body{
     position: absolute;
     left: 45%;
 }
+#level2-ok{
+    position: absolute;
+    left: 45%;
+}
+
 
 .btn:link,
 .btn:visited {

@@ -3,14 +3,14 @@ const bubbleArray = [];
 const bubbleImage = new Image();
 bubbleImage.src = "./img/bubble_pop_frame_01.png"
 
-const player = new Player();
+// const player = new Player2();
 
 class bubble {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = canvas.height + 100;
         this.radius = 30;
-        this.speed = Math.random() * 7 + 1;
+        this.speed = Math.random() * 4 + 1;
         this.distance;
         this.counted = false;
     }
@@ -33,7 +33,13 @@ function handleBubbles() {
         bubbleArray.push(new bubble());
 
     }
+
     for (let i = 0; i < bubbleArray.length; i++) {
+        if(score>10)
+        {
+            console.log(score);
+            bubbleArray[i].speed=Math.random() * 7 + 1;
+        }
         bubbleArray[i].update();
         bubbleArray[i].draw();
         if (bubbleArray[i].y < 0 - bubbleArray[i].radius * 2) {
@@ -44,7 +50,7 @@ function handleBubbles() {
         else if (bubbleArray[i].distance < bubbleArray[i].radius + player.radius) {
             if (!bubbleArray[i].counted) {
                 score++;
-                
+                stopScore++;
 
                 bubbleArray[i].counted = true;
                 
@@ -59,12 +65,14 @@ function handleBubbles() {
 }
 const background = new Image();
 
-
 function handleBackground() {
+   
     if (score <= 5) {
+       
         background.src = "./img/8.jpg";
     }
     else if(score <=10 ){
+       
         background.src = "./img/2.jpg";
     }
     else{
@@ -74,25 +82,27 @@ function handleBackground() {
 }
 
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    handleBackground();
-    if(mouse.click==true)
-    {
-        handleBubbles();
-        handeleEnemies()
-    }
+
+// function animate() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//     handleBackground();
+//     if(mouse.click==true)
+//     {
+//         handleBubbles();
+//         handeleEnemies()
+//     }
     
-    player.update();
-    player.draw();
+//     player.update();
+//     player.draw();
 
-    gameFrame++;
-    ctx.fillText('score:' + score, 50, 100)
-    ctx.fillStyle = "black";
-    ctx.font = "50px Arial";
-    if (!gameOver)
-    requestAnimationFrame(animate);
-}
+//     gameFrame++;
+//     ctx.fillText('score:' + score, 50, 100)
+//     ctx.fillStyle = "black";
+//     ctx.font = "50px Arial";
+//     if (!gameOver)
+//     requestAnimationFrame(animate);
+// }
 
-animate();
+// animate();
