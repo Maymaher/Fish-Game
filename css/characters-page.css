@@ -101,4 +101,12 @@ margin-top: 3%;
  
   
  }
+
+ #backarrow{
+	font-size: 46px;
+    color: black;
+    position: absolute;
+    top: 18px;
+    left: 29px;
+}
  
