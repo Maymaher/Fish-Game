@@ -154,7 +154,7 @@ function animate() {
     else if (score == 151) {
         mouse.click = false
         document.getElementById("level-up3").style.display = "block"
-        console.log(score);
+        
     }
     handleBackground();
     if (mouse.click == true) {
@@ -170,15 +170,23 @@ function animate() {
     gameFrame++;
 if(stopScore<50)
     ctx.fillText( stopScore +"/ 50", 50, 60)
-    else if(stopScore<=150)
+    else if(stopScore<150)
     ctx.fillText( stopScore +"/ 150", 30, 60)
     else
     ctx.fillText( stopScore +"/ 250", 30, 60)
     ctx.fillStyle = "white";
     ctx.font = "50px Arial";
     if (!gameOver)
+    {
+        if(score==250)
+        {
+            document.getElementById("win-div").style.display = "block"
+        }
+        else
         requestAnimationFrame(animate);
-}
+    }
+       
+    }
 
 
 
@@ -186,25 +194,3 @@ if(stopScore<50)
 
 animate();
  
-//  function animate() {
-//      ctx.clearRect(0, 0, canvas.width, canvas.height);
- 
-//      handleBackground();
-//      if(mouse.click==true)
-//      {
-//         handleBubbles();
-//         handeleEnemies()
-//      }
-     
-//      player.update();
-//      player.draw();
- 
-//      gameFrame++;
-//      ctx.fillText( stopScore +"/ 100", 50, 60)
-//      ctx.fillStyle = "black";
-//      ctx.font = "50px Arial";
-//      if (!gameOver)
-//      requestAnimationFrame(animate);
-//  }
- 
-//  animate();

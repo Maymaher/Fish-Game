@@ -240,8 +240,9 @@ function handeleEnemies() {
 
 
 function handeleGameOver() {
-    ctx.fillStyle = 'white'
-    ctx.fillText('Game Over , you Reach Score' + score, 130, 250)
+    // ctx.fillStyle = 'white'
+    // ctx.fillText('Game Over , you Reach Score' + score, 130, 250)
+    document.getElementById("game-over-div").style.display = "block"
     gameOver = true
 }
 
