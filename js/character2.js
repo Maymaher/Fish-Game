@@ -8,8 +8,7 @@ playerLeft.src="./img/character2-co-resizedimage.png";
 
  playeRight.src="./img/character2-co-flipped.png"
  
- const leve2_div = document.getElementById("level-up2").style.display = "none"
- const level2ok = document.getElementById("level2-ok")
+
 
 class Player2{
     constructor(){
@@ -44,23 +43,6 @@ class Player2{
     }
     draw(){
 
-        // if(mouse.click)
-        // {
-        //      console.log("move");
-        //     ctx.lineWidth=0.2;
-        //     ctx.beginPath();
-        //     ctx.moveTo(this.x,this.y);
-        //     ctx.lineTo(mouse.x,mouse.y);
-        //     ctx.stroke();
-
-        // }
-       
-        //ctx.fillStyle='red';
-        //ctx.beginPath();
-        //ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);
-       // ctx.fill();
-        //ctx.closePath()
-       // ctx.fillRect(this.x,this.y,this.radius,2);
        ctx.save();
      //   ctx.rotate(this.angle)
         ctx.translate(this.x,this.y);
@@ -83,7 +65,7 @@ class Player2{
 
             }
         }
-        else if (score <150) {
+        else if (score <=151) {
             console.log("two");
 
             if (this.x >= mouse.x) {
@@ -138,22 +120,12 @@ const player=new Player2();
 
 
 
-level2ok.addEventListener("click", function () {
-    mouse.click = true;
-    document.getElementById("level-up2").style.display = "none"
-    console.log("hereeeeeeeeeee");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    score = score + 1;
-
-
-})
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 
-    document.getElementById("level-up2").style.display = "none"
+    // document.getElementById("level-up2").style.display = "none"
     if (score == 50) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
@@ -161,9 +133,9 @@ function animate() {
 
 
     }
-    else if (score == 150) {
+    else if (score == 151) {
         mouse.click = false
-        document.getElementById("level-up2").style.display = "block"
+        document.getElementById("level-up3").style.display = "block"
         console.log(score);
     }
     handleBackground();
@@ -180,7 +152,7 @@ function animate() {
     gameFrame++;
 if(stopScore<50)
     ctx.fillText( stopScore +"/ 50", 50, 60)
-    else if(stopScore<150)
+    else if(stopScore<=150)
     ctx.fillText( stopScore +"/ 150", 30, 60)
     else
     ctx.fillText( stopScore +"/ 250", 30, 60)

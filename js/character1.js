@@ -2,18 +2,10 @@
 const playerLeft = new Image();
 playerLeft.src = "./img/char1-co-resizedimage.png";
 
-// //playerLeft.setAttribute('bordee-radius','25px')
 const playeRight = new Image();
 playeRight.src = "./img/char1-co-flipped.png"
 
-const leve2_div = document.getElementById("level-up2").style.display = "none"
-const level2ok = document.getElementById("level2-ok")
 
-
-// // const playedown_left=new Image();
-// // playedown_left.src="./img/imageonline-co-flipped (7).png"
-// // const playedown_Rigth=new Image();
-// //  playedown_Rigth.src="./img/imageonline-co-flipped (9).png"
 
 const bubble1 = new bubble();
 
@@ -71,8 +63,8 @@ class Player {
 
             }
         }
-        else if (score <150) {
-            console.log("two");
+        else if (score <=151) {
+            // console.log("two");
 
             if (this.x >= mouse.x) {
 
@@ -125,14 +117,6 @@ class Player {
 const player = new Player();
 // var enemy1 = new Enemy()
 
-level2ok.addEventListener("click", function () {
-    mouse.click = true;
-    document.getElementById("level-up2").style.display = "none"
-    console.log("hereeeeeeeeeee");
-    score = score + 1;
-
-
-})
 
 
 function animate() {
@@ -147,9 +131,9 @@ function animate() {
 
 
     }
-    else if (score == 150) {
+    else if (score == 151) {
         mouse.click = false
-        document.getElementById("level-up2").style.display = "block"
+        document.getElementById("level-up3").style.display = "block"
         console.log(score);
     }
     handleBackground();
@@ -166,9 +150,9 @@ function animate() {
     gameFrame++;
 if(stopScore<50)
     ctx.fillText( stopScore +"/ 50", 50, 60)
-    else if(stopScore<150)
+    else if(stopScore<=150)
     ctx.fillText( stopScore +"/ 150", 30, 60)
-    else
+    else 
     ctx.fillText( stopScore +"/ 250", 30, 60)
     ctx.fillStyle = "white";
     ctx.font = "50px Arial";
