@@ -3,11 +3,6 @@ var enemyImage1 = new Image()
 enemyImage1.src = './img/__cartoon_fish_06_yellow_swim.png'
 
 
-// var enemyImage2 = new Image()
-// enemyImage2.src = './img/fish_blue.png'
-// var enemyImage3 = new Image()
-// enemyImage3.src = './img/fish_purpal.png'
-
 class Enemy {
     constructor() {
         this.x = canvas.width + 200
@@ -174,7 +169,7 @@ function handeleEnemies() {
     
             }
         }
-        else if(score<150)
+        else if(score<=151)
         {
             
         
@@ -230,7 +225,7 @@ function handeleEnemies() {
           
        }
 
-       if(score==100){
+       if(score==151){
         EnemyArray.splice(0, EnemyArray.length);
            
        }
@@ -251,33 +246,4 @@ function handeleGameOver() {
 }
 
 
-// function animate() {
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
-//     handeleEnemies()
-//     // gameFrame++;
-//     // handleBackground();
-//     // handleBubbles();
-//     // player.update();
-//     // player.draw();
-
-
-//     gameFrame++;
-//     // ctx.fillText('score:' + score, 50, 100)
-//     // ctx.fillStyle = "black";
-//     // ctx.font = "50px Arial";
-//     requestAnimationFrame(animate);
-// }
-
-// animate();
-
-
-// function animate() {
-//     handeleEnemies()
-//     gameFrame++;
-//     // ctx.fillText('score:'+score,50,100)
-//     // if (!gameOver)
-//      requestAnimationFrame(animate);
-// }
-
-//  animate();
 
