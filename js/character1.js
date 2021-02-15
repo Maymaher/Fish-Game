@@ -39,11 +39,11 @@ class Player {
         const dy = this.y - mouse.y;
 
         if (mouse.x != this.x) {
-            this.x -= dx / 30;
+            this.x -= dx / 20;
         }
 
         if (mouse.y != this.y) {
-            this.y -= dy * 2 / 30;
+            this.y -= dy * 2 / 20;
         }
 
     }
