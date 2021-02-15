@@ -15,12 +15,33 @@
 
 // rs.close;
 // connection.close;
+var s=""
+var input_name=document.getElementsByTagName("input")[0]
+var submit_button=document.getElementsByTagName("button")
+submit_button[0].addEventListener("click",mainn)
+// var arr=[]
+function mainn(){
 
-var inputs=document.getElementsByTagName("input")
-if(inputs[0].value && inputs[1].value)
+ 
+if(input_name.value)
 {
-    window.location.replace("index.html");
+  
+
+//     arr.push( localStorage.getItem("name"))
+  
+//     arr.push(input_name.value)
     
-
-
+//     console.log(input_name.value);
+//     //   window.location.replace("./index.html");
+   window.location.href = "./index.html";
+ 
+ localStorage.setItem("name",input_name.value );
+ 
 }
+else{
+    alert("please enter Youre name to enter")
+}
+}
+
+
+ 
