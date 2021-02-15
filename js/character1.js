@@ -53,12 +53,12 @@ class Player {
         ctx.save();
         //   ctx.rotate(this.angle)
         ctx.translate(this.x, this.y);
-        if (score < 5) {
+        if (score < 50) {
             if (this.x >= mouse.x) {
                 console.log("one");
 
                 ctx.drawImage(playerLeft, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
-                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth / 2, this.spriteHeight / 2);
+                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth / 1.5, this.spriteHeight / 1.5);
 
 
             }
@@ -66,12 +66,12 @@ class Player {
 
 
                 ctx.drawImage(playeRight, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
-                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth / 2, this.spriteHeight / 2);
+                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth / 1.5, this.spriteHeight / 1.5);
 
 
             }
         }
-        else if (score <= 10) {
+        else if (score <150) {
             console.log("two");
 
             if (this.x >= mouse.x) {
@@ -99,7 +99,7 @@ class Player {
 
 
                 ctx.drawImage(playerLeft, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
-                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth * 1.2, this.spriteHeight * 1.2);
+                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth * 1.5, this.spriteHeight * 1.5);
 
 
             }
@@ -107,7 +107,7 @@ class Player {
 
 
                 ctx.drawImage(playeRight, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
-                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth * 1.2, this.spriteHeight * 1.2);
+                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth * 1.5, this.spriteHeight * 1.5);
 
 
             }
@@ -147,7 +147,7 @@ function animate() {
 
 
     }
-    else if (score == 100) {
+    else if (score == 150) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
         console.log(score);
@@ -164,9 +164,13 @@ function animate() {
     player.draw();
 
     gameFrame++;
-
-    ctx.fillText( stopScore +"/ 100", 50, 60)
-    ctx.fillStyle = "black";
+if(stopScore<50)
+    ctx.fillText( stopScore +"/ 50", 50, 60)
+    else if(stopScore<150)
+    ctx.fillText( stopScore +"/ 150", 30, 60)
+    else
+    ctx.fillText( stopScore +"/ 250", 30, 60)
+    ctx.fillStyle = "white";
     ctx.font = "50px Arial";
     if (!gameOver)
         requestAnimationFrame(animate);

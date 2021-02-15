@@ -71,7 +71,7 @@ function handleBackground() {
        
         background.src = "./img/8.jpg";
     }
-    else if(score <100 ){
+    else if(score <150 ){
        
         background.src = "./img/2.jpg";
     }
