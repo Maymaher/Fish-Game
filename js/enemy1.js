@@ -122,12 +122,34 @@ function handeleEnemies() {
 
     // enemy1.update()
     // enemy1.draw()
-    if (gameFrame % 600 == 0) {
+    if(score<=50)
+    {
+        if (gameFrame % 600 == 0) {
 
-        EnemyArray.push(new Enemy());
-
-
+            EnemyArray.push(new Enemy());
+    
+    
+        }
     }
+
+    else if(score<150){
+        if (gameFrame % 400 == 0) {
+
+            EnemyArray.push(new Enemy());
+    
+    
+        }
+    }
+
+    else{
+        if (gameFrame % 250 == 0) {
+
+            EnemyArray.push(new Enemy());
+    
+    
+        }
+    }
+    
   
     
     for (let i = 0; i < EnemyArray.length; i++) {
@@ -152,17 +174,10 @@ function handeleEnemies() {
     
             }
         }
-        else if(score<100)
+        else if(score<150)
         {
-            // EnemyArray.pop()
-            // if (gameFrame % 100 == 0) {
-
-            //     EnemyArray.push(new Enemy());
+            
         
-        
-            // }
-          
-
             if(i%2==0)
             {
                 enemyImage1.src = './img/image1.png'
@@ -212,12 +227,12 @@ function handeleEnemies() {
         // }
        if(score==50){
         EnemyArray.splice(0, EnemyArray.length);
-            // i--;
+          
        }
 
        if(score==100){
         EnemyArray.splice(0, EnemyArray.length);
-            // i--;
+           
        }
 
 

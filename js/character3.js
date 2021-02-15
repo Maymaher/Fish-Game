@@ -64,24 +64,66 @@ class Player3{
         ctx.translate(this.x,this.y);
         
             
-        if(this.x>=mouse.x){
-            
-            
-            ctx.drawImage( playerLeft,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-                this.spritewidth,this.spriteHeight,0-52,0-61,this.spritewidth/1.1,this.spriteHeight/1.1);
-              
-          
-       }
-        else if (this.x<mouse.x){
-           
-            
-            ctx.drawImage( playeRight,this.frameX*this.spritewidth,this.frameY*this.spriteHeight,
-            this.spritewidth,this.spriteHeight,0-60,0-65,this.spritewidth/1.1,this.spriteHeight/1.1);
+        if (score < 50) {
+            if (this.x >= mouse.x) {
+                console.log("one");
+
+                ctx.drawImage(playerLeft, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
+                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth / 1.5, this.spriteHeight / 1.5);
 
 
-        
-    }
-//    
+            }
+            else if (this.x < mouse.x) {
+
+
+                ctx.drawImage(playeRight, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
+                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth / 1.5, this.spriteHeight / 1.5);
+
+
+            }
+        }
+        else if (score <150) {
+            console.log("two");
+
+            if (this.x >= mouse.x) {
+
+
+                ctx.drawImage(playerLeft, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
+                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth, this.spriteHeight);
+
+
+            }
+            else if (this.x < mouse.x) {
+
+
+                ctx.drawImage(playeRight, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
+                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth, this.spriteHeight);
+
+
+            }
+        }
+
+
+        else {
+            console.log("therd");
+            if (this.x >= mouse.x) {
+
+
+                ctx.drawImage(playerLeft, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
+                    this.spritewidth, this.spriteHeight, 0 - 52, 0 - 61, this.spritewidth * 1.3, this.spriteHeight * 1.3);
+
+
+            }
+            else if (this.x < mouse.x) {
+
+
+                ctx.drawImage(playeRight, this.frameX * this.spritewidth, this.frameY * this.spriteHeight,
+                    this.spritewidth, this.spriteHeight, 0 - 60, 0 - 65, this.spritewidth * 1.3, this.spriteHeight * 1.3);
+
+
+            }
+        }
+
 
         ctx.restore()
        
@@ -92,26 +134,88 @@ class Player3{
 
 
  const player=new Player3();
- 
- function animate() {
-     ctx.clearRect(0, 0, canvas.width, canvas.height);
- 
-     handleBackground();
-     if(mouse.click==true)
-     {
+
+
+
+
+
+ level2ok.addEventListener("click", function () {
+    mouse.click = true;
+    document.getElementById("level-up2").style.display = "none"
+    console.log("hereeeeeeeeeee");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    score = score + 1;
+
+
+})
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+    document.getElementById("level-up2").style.display = "none"
+    if (score == 50) {
+        mouse.click = false
+        document.getElementById("level-up2").style.display = "block"
+        console.log(score);
+
+
+    }
+    else if (score == 150) {
+        mouse.click = false
+        document.getElementById("level-up2").style.display = "block"
+        console.log(score);
+    }
+    handleBackground();
+    if (mouse.click == true) {
+
         handleBubbles();
         handeleEnemies()
-     }
+    }
+
+
+    player.update();
+    player.draw();
+
+    gameFrame++;
+if(stopScore<50)
+    ctx.fillText( stopScore +"/ 50", 50, 60)
+    else if(stopScore<150)
+    ctx.fillText( stopScore +"/ 150", 30, 60)
+    else
+    ctx.fillText( stopScore +"/ 250", 30, 60)
+    ctx.fillStyle = "white";
+    ctx.font = "50px Arial";
+    if (!gameOver)
+        requestAnimationFrame(animate);
+}
+
+
+
+
+
+animate();
+ 
+//  function animate() {
+//      ctx.clearRect(0, 0, canvas.width, canvas.height);
+ 
+//      handleBackground();
+//      if(mouse.click==true)
+//      {
+//         handleBubbles();
+//         handeleEnemies()
+//      }
      
-     player.update();
-     player.draw();
+//      player.update();
+//      player.draw();
  
-     gameFrame++;
-     ctx.fillText( stopScore +"/ 100", 50, 60)
-     ctx.fillStyle = "black";
-     ctx.font = "50px Arial";
-     if (!gameOver)
-     requestAnimationFrame(animate);
- }
+//      gameFrame++;
+//      ctx.fillText( stopScore +"/ 100", 50, 60)
+//      ctx.fillStyle = "black";
+//      ctx.font = "50px Arial";
+//      if (!gameOver)
+//      requestAnimationFrame(animate);
+//  }
  
- animate();
+//  animate();
