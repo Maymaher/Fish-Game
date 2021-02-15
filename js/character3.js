@@ -5,8 +5,8 @@ playerLeft.src="./img/imageonline-co-resizedimage__4_-removebg-preview__1_-remov
 
  playeRight.src="./img/char3-right2-removebg-preview (1).png"
  
- const leve2_div = document.getElementById("level-up2").style.display = "none"
-const level2ok = document.getElementById("level2-ok")
+//  const leve2_div = document.getElementById("level-up2").style.display = "none"
+// const level2ok = document.getElementById("level2-ok")
 
 
 class Player3{
@@ -138,17 +138,6 @@ class Player3{
 
 
 
-
- level2ok.addEventListener("click", function () {
-    mouse.click = true;
-    document.getElementById("level-up2").style.display = "none"
-   
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    score = score + 1;
-
-
-})
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
