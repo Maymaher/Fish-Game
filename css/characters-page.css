@@ -6,7 +6,7 @@
     margin: 0;
     font-family: Arial;
     font-size: 17px;
-    background-image: url("../img/77.jpg");
+    background-image: url("../img/6.png");
     background-size: cover;
   }
   
@@ -19,46 +19,13 @@
     object-fit: cover;
 
   }
-.char_container{
- margin: 10%;
- margin-left:23%;
- margin-bottom:10%;
- width: auto;
- position: relative;
 
- height: auto;
-}
-#fish1{
-   border: 1px solid black;
-  border-radius:25px;
-  padding:0%;
-  margin: 0;
- 
-  
- 
- 
-}
-#fish2{
-   
-  border: 1px solid black;
-  border-radius:25px;
-  margin-left:5%;
-
- 
- 
-}
-#fish3{
-   border: 1px solid black;
-  margin-left:5%;
-  border-radius:25px;
- 
-}
 
 button{
 
   border-radius:25px;
   color: white;
-  background-color:lightblue;
+  background-color:black;
   
   font-family: Arial;
   font-size: 17px;
@@ -72,32 +39,32 @@ button{
  }
  #button-1{
   
-  margin-left:6%;
+  margin-left:11%;
   padding: 1%;
-  width:10%;
+  width:7%;
+  margin-bottom: 10%; 
+
   
 
 }
  #button-2{
   
-  margin-left:18%;
+  margin-left:19%;
   padding: 1%;
-  width:10%;
+  width:7%;
+  margin-bottom: 10%; 
+
  }
  #button-3{
-  margin-left:17%;
+  margin-left:19%;
   padding: 1%;
-  width:10%;
-
- }
- .buttons{
-margin-top: 3%;
-
+  width:7%;
 
  }
  img{
   border-radius:25px;
   border:0;
+  
  
   
  }
@@ -108,5 +75,9 @@ margin-top: 3%;
     position: absolute;
     top: 18px;
     left: 29px;
+}
+#backarrow{
+
+  color: aliceblue;
 }
  
