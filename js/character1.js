@@ -140,14 +140,14 @@ function animate() {
 
 
     document.getElementById("level-up2").style.display = "none"
-    if (score == 5) {
+    if (score == 50) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
         console.log(score);
 
 
     }
-    else if (score == 10) {
+    else if (score == 100) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
         console.log(score);
