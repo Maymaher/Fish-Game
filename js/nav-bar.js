@@ -1,5 +1,5 @@
 var music=document.getElementById("music")
-var audio=document.querySelector("audio")
+var audio=document.querySelector("audio");
 var reset=document.getElementsByTagName("button")[0]
 var p=document.getElementsByTagName("p")[0]
 
@@ -12,7 +12,7 @@ flag=true;
 function playamusic(){
 
 if(flag){
-   // audio.play();
+   audio.play();
    music.className="fa fa-volume-up"
     flag=false
     score++;
@@ -22,7 +22,7 @@ if(flag){
 }
 
 else if(!flag){
- //  audio.pause();
+  audio.pause();
     music.className="fa fa-volume-off"
     flag=true
 }

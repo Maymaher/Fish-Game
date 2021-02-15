@@ -5,6 +5,12 @@ canvas.height = window.innerHeight;
 const ok=document.getElementById("ok")
 
 
+const leve2_div = document.getElementById("level-up2").style.display = "none"
+const level2ok = document.getElementById("level2-ok")
+
+const level3ok = document.getElementById("level3-ok")
+
+
 
 // const level2ok=document.getElementById("level2-ok")
 // console.log("w="+window.innerWidth);
@@ -52,21 +58,21 @@ ok.addEventListener("click",function()
 })
 
 
+level2ok.addEventListener("click", function () {
+    mouse.click = true;
+    document.getElementById("level-up2").style.display = "none"
+    console.log("hereeeeeeeeeee");
+    score = score + 1;
 
-// level2ok.addEventListener("click",function()
-// {
-//     mouse.click=true;
-//     document.getElementById("level-up2").style.display="none"
 
-// })
+})
 
-// const playerLeft=new Image();
-// playerLeft.src="./img/imageonline-co-resizedimage (3).png";
 
-// playerLeft.setAttribute('bordee-radius','25px')
-//  const playeRight=new Image();
-//   playeRight.src="./img/imageonline-co-flipped (8).png"
-// const playedown_left=new Image();
-// playedown_left.src="./img/imageonline-co-flipped (7).png"
-// const playedown_Rigth=new Image();
-//  playedown_Rigth.src="./img/imageonline-co-flipped (9).png"
+level3ok.addEventListener("click", function () {
+    mouse.click = true;
+    document.getElementById("level-up3").style.display = "none"
+    console.log("hereeeeeeeeeee");
+    score = score + 1;
+
+
+})

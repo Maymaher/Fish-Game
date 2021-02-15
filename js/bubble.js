@@ -71,7 +71,7 @@ function handleBackground() {
        
         background.src = "./img/8.jpg";
     }
-    else if(score <150 ){
+    else if(score <=150 ){
        
         background.src = "./img/2.jpg";
     }
@@ -83,26 +83,3 @@ function handleBackground() {
 
 
 
-
-// function animate() {
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-//     handleBackground();
-//     if(mouse.click==true)
-//     {
-//         handleBubbles();
-//         handeleEnemies()
-//     }
-    
-//     player.update();
-//     player.draw();
-
-//     gameFrame++;
-//     ctx.fillText('score:' + score, 50, 100)
-//     ctx.fillStyle = "black";
-//     ctx.font = "50px Arial";
-//     if (!gameOver)
-//     requestAnimationFrame(animate);
-// }
-
-// animate();

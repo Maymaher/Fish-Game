@@ -46,7 +46,25 @@ body{
     z-index: 1;
     border-radius: 67px;
     box-shadow: 7px 10px 13px #8a8383;
-    /* display: none; */
+    position: absolute;
+    top: 3%;
+    display: none;
+}
+
+
+#level-up3{
+    width: 815px;
+    height: 500px;
+    /* text-align: center; */
+    margin: 94px auto;
+    /* background-color: #bd4da4; */
+    background-color: #d29dc6;
+    z-index: 1;
+    border-radius: 67px;
+    position: absolute;
+    top: 3%;
+    box-shadow: 7px 10px 13px #8a8383;
+    display: none;
 }
 
 #fish-desc{
@@ -137,6 +155,11 @@ body{
     left: 45%;
 }
 
+
+#level3-ok{
+    position: absolute;
+    left: 45%;
+}
 
 .btn:link,
 .btn:visited {
