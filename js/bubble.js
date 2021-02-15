@@ -67,11 +67,11 @@ const background = new Image();
 
 function handleBackground() {
    
-    if (score <= 5) {
+    if (score <50) {
        
         background.src = "./img/8.jpg";
     }
-    else if(score <=10 ){
+    else if(score <100 ){
        
         background.src = "./img/2.jpg";
     }

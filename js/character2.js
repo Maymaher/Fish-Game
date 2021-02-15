@@ -114,14 +114,14 @@ function animate() {
 
 
     document.getElementById("level-up2").style.display = "none"
-    if (score == 5) {
+    if (score == 50) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
         console.log(score);
 
 
     }
-    else if (score == 10) {
+    else if (score == 100) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
         console.log(score);
@@ -140,7 +140,7 @@ function animate() {
     gameFrame++;
 
     ctx.fillText( stopScore +"/ 100", 50, 60)
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.font = "50px Arial";
     if (!gameOver)
         requestAnimationFrame(animate);

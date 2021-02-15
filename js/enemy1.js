@@ -81,21 +81,21 @@ class Enemy {
         ctx.beginPath()
         // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
         ctx.fill()
-        if(score<5)
+        if(score<50)
         {
             ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
                 this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth / 4, this.spriteHeight / 4)
     
         }
 
-        else if(score<10)
+        else if(score<100)
         {
             ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
                 this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth/1.5 , this.spriteHeight/1.5 )
     
         }
 
-        else{
+        else {
             ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
                 this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth/1.5 , this.spriteHeight/1.5 )
 
@@ -122,8 +122,7 @@ function handeleEnemies() {
 
     // enemy1.update()
     // enemy1.draw()
-
-    if (gameFrame % 100 == 0) {
+    if (gameFrame % 600 == 0) {
 
         EnemyArray.push(new Enemy());
 
@@ -132,9 +131,11 @@ function handeleEnemies() {
   
     
     for (let i = 0; i < EnemyArray.length; i++) {
-        if(score<5)
+        if(score<50)
         {
-
+            // EnemyArray.splice(0, EnemyArray.length);
+           
+          
             
             if(i%2==0)
             {
@@ -151,9 +152,16 @@ function handeleEnemies() {
     
             }
         }
-        else if(score<10)
+        else if(score<100)
         {
-           
+            // EnemyArray.pop()
+            // if (gameFrame % 100 == 0) {
+
+            //     EnemyArray.push(new Enemy());
+        
+        
+            // }
+          
 
             if(i%2==0)
             {
@@ -166,6 +174,7 @@ function handeleEnemies() {
     
             }
             else{
+               
                 enemyImage1.src = './img/image3.png'
     
             }
@@ -174,31 +183,43 @@ function handeleEnemies() {
         else{
             if(i%2==0)
         {
+           
             enemyImage1.src = './img/enemy11.3.png'
            
         }
         else if(i%3==0){
+            
             enemyImage1.src = './img/enemy22.3.png'
            
 
         }
         else{
+           
             enemyImage1.src = './img/enemy33.3.png'
 
         }
         }
        
-        if(score<5)
+        if(score<50)
         {
             EnemyArray[i].update2();
         }
         EnemyArray[i].update();
         EnemyArray[i].draw();
-        // if (EnemyArray[i].x < 0 - EnemyArray[i].radius) {
+        // if (EnemyArray[i].x < 0 - EnemyArray[i].radius || score==10 ) {
         //     EnemyArray.splice(i, 1);
         //     i--;
         // }
-       
+       if(score==50){
+        EnemyArray.splice(0, EnemyArray.length);
+            // i--;
+       }
+
+       if(score==100){
+        EnemyArray.splice(0, EnemyArray.length);
+            // i--;
+       }
+
 
 
 
