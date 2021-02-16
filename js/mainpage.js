@@ -1,6 +1,9 @@
+
+// console.log( document.getElementById("ahln").textContent);
+
 function createbubble() {
     var section = document.querySelector('section')
-    console.log("imherreee")
+    // console.log("imherreee")
     const createspan = document.createElement('span')
     var size = Math.random() * 60;
     createspan.style.width = 20 + size + 'px';
@@ -14,5 +17,7 @@ function createbubble() {
     
 }
 setInterval(createbubble,50)
+document.getElementById("ahln").textContent="Welcome "+localStorage.getItem("name");
+
 
 // createbubble()
