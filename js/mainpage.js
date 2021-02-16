@@ -1,6 +1,5 @@
 
-document.getElementById("ahln").textContent="Welcome "+localStorage.getItem("name");
-console.log( document.getElementById("ahln").textContent);
+// console.log( document.getElementById("ahln").textContent);
 
 function createbubble() {
     var section = document.querySelector('section')
@@ -18,6 +17,7 @@ function createbubble() {
     
 }
 setInterval(createbubble,50)
+document.getElementById("ahln").textContent="Welcome "+localStorage.getItem("name");
 
 
 // createbubble()

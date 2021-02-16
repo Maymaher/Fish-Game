@@ -15,8 +15,25 @@
 
 // rs.close;
 // connection.close;
-var s=""
-var input_name=document.getElementsByTagName("input")[0]
+
+
+
+function createbubble() {
+    var section = document.querySelector('section')
+     console.log("imherreee")
+    const createspan = document.createElement('span')
+    var size = Math.random() * 60;
+    createspan.style.width = 20 + size + 'px';
+    createspan.style.height = 20 + size + 'px';
+    createspan.style.left = Math.random() * innerWidth + "px";
+    section.appendChild(createspan);
+    setTimeout(() => {
+        createspan.remove()
+    }, 4000)
+
+    
+}
+ var input_name=document.getElementsByTagName("input")[0]
 var submit_button=document.getElementsByTagName("button")
 submit_button[0].addEventListener("click",mainn)
 // var arr=[]
@@ -32,8 +49,8 @@ if(input_name.value)
 //     arr.push(input_name.value)
     
 //     console.log(input_name.value);
-//     //   window.location.replace("./index.html");
-   window.location.href = "./index.html";
+       window.location.replace("./index.html");
+//    window.location.href = "./index.html";
  
  localStorage.setItem("name",input_name.value );
  
@@ -44,4 +61,6 @@ else{
 }
 
 
+
+setInterval(createbubble,50)
  
