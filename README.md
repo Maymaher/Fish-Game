@@ -1,3 +1,10 @@
+ [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+ [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+ [![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
+ [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com)
+ 
 # FishDom Game
 FishDom is a fish game , The goal is make fish eat bubbles without hit any enemy so after reach to specific score , player could move to next level .
 
