@@ -21,3 +21,8 @@ document.getElementById("ahln").textContent="Welcome "+localStorage.getItem("nam
 
 
 // createbubble()
+document.getElementById("backarrow").addEventListener("click",loginn)
+function loginn()
+{
+window.location.replace("./index.html");
+}

@@ -1,6 +1,11 @@
 characters=document.getElementsByTagName('img')
 buttons=document.getElementsByTagName('button')
 links= document.getElementsByTagName('a')
+document.getElementById("backarrow").addEventListener("click",loginn)
+function loginn()
+{
+window.location.replace("./main-page.html");
+}
 for(var key of buttons ){
 key.addEventListener("mousemove",add)
 key.addEventListener("mouseout",small)
