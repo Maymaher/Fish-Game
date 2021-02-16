@@ -49,7 +49,7 @@ if(input_name.value)
 //     arr.push(input_name.value)
     
 //     console.log(input_name.value);
-       window.location.replace("./index.html");
+       window.location.replace("./main-page.html");
 //    window.location.href = "./index.html";
  
  localStorage.setItem("name",input_name.value );
