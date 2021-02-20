@@ -6,6 +6,16 @@ function back()
 {
 window.location.replace("./character-page.html");
 }
+buttons[1].addEventListener("click",about)
+function about()
+{
+window.location.replace("./about.html");
+}
+buttons[1].addEventListener("click",back)
+function back()
+{
+window.location.replace("./character-page.html");
+}
 
 
 function createbubble() {
