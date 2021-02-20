@@ -3,8 +3,6 @@ var audio=document.querySelector("audio");
 var reset=document.getElementsByTagName("button")[0]
 var p=document.getElementsByTagName("p")[0]
 
-
-console.log("score======"+stopScore);
 console.log(p.textContent);
 music.addEventListener("click",playamusic)
 flag=true;
@@ -16,8 +14,8 @@ if(flag){
    music.className="fa fa-volume-up"
     flag=false
     score++;
-    p.textContent=stopScore+"/100"
-    console.log("score======"+stopScore);
+  
+
  
 }
 
@@ -34,9 +32,8 @@ reset.addEventListener("click",function()
 {
    
     score=0;
-    console.log(score);
-    p.textContent=score+"/100"
-    console.log(p.textContent);
+   
+  
     window.location.reload(true); 
 }
 )
