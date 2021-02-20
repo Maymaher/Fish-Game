@@ -237,11 +237,13 @@ function handeleEnemies() {
 
 }
 
-
+const gameoverSound=document.createElement('audio')
+gameoverSound.src="./GAME-OVER-Voice-Sound-Effect.mp3"
 
 function handeleGameOver() {
     // ctx.fillStyle = 'white'
     // ctx.fillText('Game Over , you Reach Score' + score, 130, 250)
+    gameoverSound.play()
     document.getElementById("game-over-div").style.display = "block"
     gameOver = true
 }
