@@ -83,10 +83,10 @@ class Enemy {
     
         }
 
-        else if(score<100)
+        else if(score<150)
         {
             ctx.drawImage(enemyImage1, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight,
-                this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth/1.5 , this.spriteHeight/1.5 )
+                this.spriteWidth, this.spriteHeight, this.x - 75, this.y - 60, this.spriteWidth/1.1 , this.spriteHeight/1.1 )
     
         }
 

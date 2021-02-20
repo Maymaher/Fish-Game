@@ -149,11 +149,11 @@ function animate() {
 
     gameFrame++;
 if(stopScore<50)
-    ctx.fillText( stopScore +"/ 50", 50, 60)
+    ctx.fillText( stopScore +"/ 50", 40, 60)
     else if(stopScore<150)
-    ctx.fillText( stopScore +"/ 150", 30, 60)
+    ctx.fillText( stopScore +"/ 150", 20, 60)
     else 
-    ctx.fillText( stopScore +"/ 250", 30, 60)
+    ctx.fillText( stopScore +"/ 250", 0, 60)
     ctx.fillStyle = "white";
     ctx.font = "50px Arial";
     if (!gameOver)

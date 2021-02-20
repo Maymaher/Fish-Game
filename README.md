@@ -9,11 +9,11 @@
 FishDom is a fish game , The goal is make fish eat bubbles without hit any enemy so after reach to specific score , player could move to next level .
 
 ## Table of Contents
-- How To Play
-- Demo
-- Game Link
-- About Us
-### 🕹️ How To Play
+- [How To Play](#How-To-Play)
+- [Demo](#About-Us)
+- [Game Link](#Game-Link)
+- [About Us](#About-Us)
+### How To Play
 Player should Login with name , then choose one of fish characters that wants to play with it , player should make fish to eat alot of bubbles as much as possible to can go to next level , and should take care to avoide hit on any enemy fish because if fish hit any enemy player will lose and game be over.
 ### 🎮 Demo
 
@@ -24,6 +24,6 @@ Player should Login with name , then choose one of fish characters that wants to
 We are a group of software engineering students at ITI from Open Source Application Development track intake 41 , we seek to development a Effective Creative Projects such as FishDom Game .
 
 - Team Member
-1. Ghada Ragab
-2. Mai Mahar
-3. Eman Soliman
+1. [Ghada Ragab](https://www.linkedin.com/in/ghadaragab/)
+2. [Mai Mahar](https://www.linkedin.com/in/mai-maher/)
+3. [Eman Soliman](https://www.linkedin.com/in/eman-soliman-a004b8147/)
