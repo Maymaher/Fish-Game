@@ -164,7 +164,7 @@ if(stopScore<50)
     ctx.font = "50px Arial";
     if (!gameOver)
     {
-        if(score==250)
+        if(stopScore==250)
         {
             document.getElementById("win-div").style.display = "block"
         }
