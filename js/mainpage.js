@@ -1,5 +1,12 @@
 
 // console.log( document.getElementById("ahln").textContent);
+buttons=document.getElementsByTagName("button")
+buttons[0].addEventListener("click",back)
+function back()
+{
+window.location.replace("./character-page.html");
+}
+
 
 function createbubble() {
     var section = document.querySelector('section')
