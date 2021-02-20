@@ -8,7 +8,11 @@ playerLeft.src="./img/character2-co-resizedimage.png";
 
  playeRight.src="./img/character2-co-flipped.png"
  
-
+ document.getElementById("back").addEventListener("click",back)
+ function back()
+ {
+ window.location.replace("./character-page.html");
+ }
 
 class Player2{
     constructor(){

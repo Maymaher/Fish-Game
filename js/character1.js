@@ -9,6 +9,12 @@ playeRight.src = "./img/char1-co-flipped.png"
 
 const bubble1 = new bubble();
 
+document.getElementById("back").addEventListener("click",back)
+function back()
+{
+window.location.replace("./character-page.html");
+}
+
 
 class Player {
     constructor() {
