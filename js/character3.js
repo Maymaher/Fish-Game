@@ -7,7 +7,11 @@ playerLeft.src="./img/imageonline-co-resizedimage__4_-removebg-preview__1_-remov
  
 //  const leve2_div = document.getElementById("level-up2").style.display = "none"
 // const level2ok = document.getElementById("level2-ok")
-
+document.getElementById("back").addEventListener("click",back)
+function back()
+{
+window.location.replace("./character-page.html");
+}
 
 class Player3{
     constructor(){
