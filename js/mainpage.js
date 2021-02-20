@@ -11,7 +11,7 @@ function about()
 {
 window.location.replace("./about.html");
 }
-buttons[1].addEventListener("click",Howtoplay)
+buttons[2].addEventListener("click",Howtoplay)
 function Howtoplay()
 {
 window.location.replace("./aboutGame.html");
