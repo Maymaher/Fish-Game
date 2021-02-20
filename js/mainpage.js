@@ -11,10 +11,10 @@ function about()
 {
 window.location.replace("./about.html");
 }
-buttons[1].addEventListener("click",back)
-function back()
+buttons[1].addEventListener("click",Howtoplay)
+function Howtoplay()
 {
-window.location.replace("./character-page.html");
+window.location.replace("./aboutGame.html");
 }
 
 
