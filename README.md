@@ -10,7 +10,6 @@ FishDom is a fish game , The goal is make fish eat bubbles without hit any enemy
 
 ## Table of Contents
 - [How To Play](#How-To-Play)
-- [Demo](#About-Us)
 - [Game Link](#Game-Link)
 - [About Us](#About-Us)
 
