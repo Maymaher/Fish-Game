@@ -25,7 +25,7 @@ Player should Login with name , then choose one of fish characters that wants to
 ### 👩‍💻About Us
 We are a group of software engineering students at ITI from Open Source Application Development track intake 41 , we seek to development a Effective Creative Projects such as FishDom Game .
 
-### Demo
+###  🎮Demo
 ![](Demo/Demo.gif)
 
 - Team Members
