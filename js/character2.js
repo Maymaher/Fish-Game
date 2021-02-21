@@ -1,6 +1,5 @@
 
 
-// player
 const playerLeft=new Image();
 playerLeft.src="./img/character2-co-resizedimage.png";
  

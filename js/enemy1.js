@@ -150,9 +150,6 @@ function handeleEnemies() {
     for (let i = 0; i < EnemyArray.length; i++) {
         if(score<50)
         {
-            // EnemyArray.splice(0, EnemyArray.length);
-           
-          
             
             if(i%2==0)
             {
@@ -217,10 +214,7 @@ function handeleEnemies() {
         }
         EnemyArray[i].update();
         EnemyArray[i].draw();
-        // if (EnemyArray[i].x < 0 - EnemyArray[i].radius || score==10 ) {
-        //     EnemyArray.splice(i, 1);
-        //     i--;
-        // }
+        
        if(score==50){
         EnemyArray.splice(0, EnemyArray.length);
           
@@ -243,8 +237,7 @@ const gameoverSound=document.createElement('audio')
 gameoverSound.src="./GAME-OVER-Voice-Sound-Effect.mp3"
 
 function handeleGameOver() {
-    // ctx.fillStyle = 'white'
-    // ctx.fillText('Game Over , you Reach Score' + score, 130, 250)
+
     gameoverSound.play()
     document.getElementById("game-over-div").style.display = "block"
     gameOver = true

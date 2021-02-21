@@ -10,11 +10,6 @@ const level2ok = document.getElementById("level2-ok")
 
 const level3ok = document.getElementById("level3-ok")
 
-
-
-// const level2ok=document.getElementById("level2-ok")
-// console.log("w="+window.innerWidth);
-// console.log("h+"+window.innerHeight);
 var gameOver = false
 
 let score = 0;
@@ -39,16 +34,10 @@ canvas.addEventListener('mousemove',function(event){
         mouse.y= event.y - canvasPosition.top;
     }
   
-    // console.log("line 22",mouse.x,mouse.y);
+   
     });
     
 
-// canvas.addEventListener('mouseup',function()
-// {
-
-// mouse.click=false;
-
-// })
 
 ok.addEventListener("click",function()
 {

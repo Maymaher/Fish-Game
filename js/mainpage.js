@@ -1,5 +1,4 @@
 
-// console.log( document.getElementById("ahln").textContent);
 buttons=document.getElementsByTagName("button")
 buttons[0].addEventListener("click",back)
 function back()
@@ -20,7 +19,7 @@ window.location.replace("./aboutGame.html");
 
 function createbubble() {
     var section = document.querySelector('section')
-    // console.log("imherreee")
+    
     const createspan = document.createElement('span')
     var size = Math.random() * 60;
     createspan.style.width = 20 + size + 'px';
