@@ -121,7 +121,6 @@ class Player {
 
 
 const player = new Player();
-// var enemy1 = new Enemy()
 
 
 

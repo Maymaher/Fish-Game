@@ -5,8 +5,6 @@ playerLeft.src="./img/imageonline-co-resizedimage__4_-removebg-preview__1_-remov
 
  playeRight.src="./img/char3-right2-removebg-preview (1).png"
  
-//  const leve2_div = document.getElementById("level-up2").style.display = "none"
-// const level2ok = document.getElementById("level2-ok")
 document.getElementById("back").addEventListener("click",back)
 function back()
 {
@@ -46,25 +44,8 @@ class Player3{
     }
     draw(){
 
-        // if(mouse.click)
-        // {
-        //      console.log("move");
-        //     ctx.lineWidth=0.2;
-        //     ctx.beginPath();
-        //     ctx.moveTo(this.x,this.y);
-        //     ctx.lineTo(mouse.x,mouse.y);
-        //     ctx.stroke();
-
-        // }
-       
-        //ctx.fillStyle='red';
-        //ctx.beginPath();
-        //ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);
-       // ctx.fill();
-        //ctx.closePath()
-       // ctx.fillRect(this.x,this.y,this.radius,2);
        ctx.save();
-     //   ctx.rotate(this.angle)
+
         ctx.translate(this.x,this.y);
         
             

@@ -13,8 +13,7 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
-    /* width: auto;
-    height: 100vh; */
+   
 }
 
 .fish{
@@ -26,9 +25,9 @@ body{
 #start-popup-desc{
     width: 815px;
     height: 500px;
-    /* text-align: center; */
+    
     margin: 94px auto;
-    /* background-color: #bd4da4; */
+    
     background-color: #d29dc6;
     z-index: 1;
     border-radius: 67px;
@@ -143,12 +142,6 @@ body{
     height: 18%;
 
 }
-/* .fa{
-    position: absolute;
-    top: 29%;
-    left: 41%;
-    font-size: 46px;
-} */
 
 .cursor{
     width: 160px;
@@ -301,8 +294,8 @@ body{
     animation: centerme 2.5s;
    
     position: absolute;
-    /* z-index: 999; To ensure that box is always on the top */
-    animation-fill-mode: forwards; /* So that box doesn't move back to default place*/
+   
+    animation-fill-mode: forwards; 
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -310,19 +303,13 @@ body{
     0%   {
         left: 0; top: 0;
     }
-    /* 50%  {
-        left: 20%;
-        top: 7%;
-        margin-top: -150px;
-        margin-left: -150px;
-    } */
+    
     100%{
         left: 25%;
         top: 7%;
-        /* margin-top: -150px;
-        margin-left: -150px; */
+       
     }
 
     
-    /* Left and Top are 50% with margins which are half of width and height */
+   
 }
