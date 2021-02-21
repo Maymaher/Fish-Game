@@ -8,7 +8,11 @@ playerLeft.src="./img/character2-co-resizedimage.png";
 
  playeRight.src="./img/character2-co-flipped.png"
  
-
+ document.getElementById("back").addEventListener("click",back)
+ function back()
+ {
+ window.location.replace("./character-page.html");
+ }
 
 class Player2{
     constructor(){
@@ -160,7 +164,7 @@ if(stopScore<50)
     ctx.font = "50px Arial";
     if (!gameOver)
     {
-        if(score==250)
+        if(stopScore==250)
         {
             document.getElementById("win-div").style.display = "block"
         }

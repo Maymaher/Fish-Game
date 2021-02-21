@@ -128,7 +128,7 @@ function handeleEnemies() {
     }
 
     else if(score<150){
-        if (gameFrame % 400 == 0) {
+        if (gameFrame % 300 == 0) {
 
             EnemyArray.push(new Enemy());
     
@@ -172,7 +172,8 @@ function handeleEnemies() {
         else if(score<=151)
         {
             
-        
+            EnemyArray[i].speed = Math.random()*3+2
+
             if(i%2==0)
             {
                 enemyImage1.src = './img/image1.png'
@@ -193,7 +194,7 @@ function handeleEnemies() {
         else{
             if(i%2==0)
         {
-           
+            EnemyArray[i].speed = Math.random()*4+2
             enemyImage1.src = './img/enemy11.3.png'
            
         }
@@ -227,6 +228,7 @@ function handeleEnemies() {
 
        if(score==151){
         EnemyArray.splice(0, EnemyArray.length);
+       
            
        }
 

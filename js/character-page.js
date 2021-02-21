@@ -1,6 +1,11 @@
 characters=document.getElementsByTagName('img')
 buttons=document.getElementsByTagName('button')
 links= document.getElementsByTagName('a')
+document.getElementById("backarrow").addEventListener("click",loginn)
+function loginn()
+{
+window.location.replace("./main-page.html");
+}
 for(var key of buttons ){
 key.addEventListener("mousemove",add)
 key.addEventListener("mouseout",small)
@@ -51,3 +56,19 @@ function litel(e)
 
 }
 console.log("ok");
+buttons[0].addEventListener("click",back)
+function back()
+{
+window.location.replace("./character3-game.html");
+
+}
+buttons[1].addEventListener("click",about)
+function about()
+{
+window.location.replace("./character2-game.html");
+}
+buttons[2].addEventListener("click",Howtoplay)
+function Howtoplay()
+{
+window.location.replace("./character1-game.html");
+}

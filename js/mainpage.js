@@ -1,5 +1,22 @@
 
 // console.log( document.getElementById("ahln").textContent);
+buttons=document.getElementsByTagName("button")
+buttons[0].addEventListener("click",back)
+function back()
+{
+window.location.replace("./character-page.html");
+}
+buttons[1].addEventListener("click",about)
+function about()
+{
+window.location.replace("./about.html");
+}
+buttons[2].addEventListener("click",Howtoplay)
+function Howtoplay()
+{
+window.location.replace("./aboutGame.html");
+}
+
 
 function createbubble() {
     var section = document.querySelector('section')
@@ -21,3 +38,8 @@ document.getElementById("ahln").textContent="Welcome "+localStorage.getItem("nam
 
 
 // createbubble()
+document.getElementById("backarrow").addEventListener("click",loginn)
+function loginn()
+{
+window.location.replace("./index.html");
+}

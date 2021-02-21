@@ -9,6 +9,12 @@ playeRight.src = "./img/char1-co-flipped.png"
 
 const bubble1 = new bubble();
 
+document.getElementById("back").addEventListener("click",back)
+function back()
+{
+window.location.replace("./character-page.html");
+}
+
 
 class Player {
     constructor() {
@@ -158,7 +164,7 @@ if(stopScore<50)
     ctx.font = "50px Arial";
     if (!gameOver)
     {
-        if(score==250)
+        if(stopScore==250)
         {
             document.getElementById("win-div").style.display = "block"
         }

@@ -61,3 +61,9 @@ function cycleText(){
   },1000)
   
 }
+
+document.getElementById("backarrow").addEventListener("click",loginn)
+function loginn()
+{
+window.location.replace("./main-page.html");
+}
