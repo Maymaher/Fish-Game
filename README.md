@@ -26,8 +26,9 @@ Player should Login with name , then choose one of fish characters that wants to
 We are a group of software engineering students at ITI from Open Source Application Development track intake 41 , we seek to development a Effective Creative Projects such as FishDom Game .
 
 ### Demo
+![](Demo/Demo.gif)
 
-- Team Member
+- Team Members
 1. [Ghada Ragab](https://www.linkedin.com/in/ghadaragab/)
 2. [Mai Mahar](https://www.linkedin.com/in/mai-maher/)
 3. [Eman Soliman](https://www.linkedin.com/in/eman-soliman-a004b8147/)
