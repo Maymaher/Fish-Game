@@ -27,7 +27,7 @@ const mouse = {
 
 
 canvas.addEventListener('mousemove',function(event){
-    // mouse.click=true;
+    
     if(mouse.click==true)
     {
         mouse.x= event.x - canvasPosition.left;
