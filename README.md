@@ -30,5 +30,5 @@ We are a group of software engineering students at ITI from Open Source Applicat
 
 - Team Members
 1. [Ghada Ragab](https://www.linkedin.com/in/ghadaragab/)
-2. [Mai Mahar](https://www.linkedin.com/in/mai-maher/)
+2. [Mai Maher](https://www.linkedin.com/in/mai-maher/)
 3. [Eman Soliman](https://www.linkedin.com/in/eman-soliman-a004b8147/)
