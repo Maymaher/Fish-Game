@@ -3,7 +3,6 @@ const bubbleArray = [];
 const bubbleImage = new Image();
 bubbleImage.src = "./img/bubble_pop_frame_01.png"
 
-// const player = new Player2();
 
 class bubble {
     constructor() {
@@ -30,7 +29,7 @@ class bubble {
 }
 
 const bubblepop1=document.createElement('audio')
-bubblepop1.src="./Plop.ogg"
+bubblepop1.src="./img/Plop.ogg"
 function handleBubbles() {
     if (gameFrame % 20 == 0) {
         bubbleArray.push(new bubble());

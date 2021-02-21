@@ -36,7 +36,7 @@ setInterval(createbubble,50)
 document.getElementById("ahln").textContent="Welcome "+localStorage.getItem("name");
 
 
-// createbubble()
+
 document.getElementById("backarrow").addEventListener("click",loginn)
 function loginn()
 {

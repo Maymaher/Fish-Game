@@ -18,7 +18,7 @@ function createbubble() {
  var input_name=document.getElementsByTagName("input")[0]
 var submit_button=document.getElementsByTagName("button")
 submit_button[0].addEventListener("click",mainn)
-// var arr=[]
+
 function mainn(){
 
  

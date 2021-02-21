@@ -49,7 +49,6 @@ class Player {
 
 
         ctx.save();
-        //   ctx.rotate(this.angle)
         ctx.translate(this.x, this.y);
         if (score < 50) {
             if (this.x >= mouse.x) {

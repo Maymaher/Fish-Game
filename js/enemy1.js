@@ -72,9 +72,9 @@ class Enemy {
 
 
     draw() {
-        // ctx.fillStyle = 'red'
+        
         ctx.beginPath()
-        // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+       
         ctx.fill()
         if(score<50)
         {
@@ -115,8 +115,6 @@ var enemy1 = new Enemy()
 function handeleEnemies() {
    
 
-    // enemy1.update()
-    // enemy1.draw()
     if(score<=50)
     {
         if (gameFrame % 600 == 0) {
@@ -234,7 +232,7 @@ function handeleEnemies() {
 }
 
 const gameoverSound=document.createElement('audio')
-gameoverSound.src="./GAME-OVER-Voice-Sound-Effect.mp3"
+gameoverSound.src="./img/GAME-OVER-Voice-Sound-Effect.mp3"
 
 function handeleGameOver() {
 

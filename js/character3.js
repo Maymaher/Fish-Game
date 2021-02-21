@@ -128,7 +128,6 @@ function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 
-    // document.getElementById("level-up2").style.display = "none"
     if (score == 50) {
         mouse.click = false
         document.getElementById("level-up2").style.display = "block"
