@@ -19,7 +19,7 @@ Player should Login with name , then choose one of fish characters that wants to
 
 
 ### Game Link
-[FishDom Game](https://github.com/Maymaher/Fish-Game)
+[FishDom Game](https://meg-fishdom-game.netlify.app/)
 
 
 ### 👩‍💻About Us
